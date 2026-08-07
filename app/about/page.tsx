@@ -30,7 +30,6 @@ export default function About() {
             <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
-            {/* এখানে pt-32 এবং sm:pt-40 বাড়িয়ে দেওয়া হয়েছে যাতে কন্টেন্ট নিচে নেমে আসে */}
             <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-32">
                     {sections.map((s) => (
@@ -93,7 +92,7 @@ export default function About() {
                                 </p>
 
                                 <a
-                                    href="#services"
+                                    href="#contact"
                                     className="relative group inline-flex items-center gap-2 bg-[#65C142] text-white font-semibold px-7 py-3.5 rounded-md mt-8 overflow-hidden transition-colors duration-300 hover:bg-[#52a034] shadow-[0_10px_25px_rgba(101,193,66,0.3)]"
                                 >
                                     <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12" />

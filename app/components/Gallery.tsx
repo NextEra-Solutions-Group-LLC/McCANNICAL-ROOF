@@ -1,5 +1,7 @@
-"use client"
+"use client";
+
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type Project = {
     title: string;
@@ -7,7 +9,6 @@ type Project = {
     src: string;
 };
 
-// Swap these `src` values for real project photos — kept as placeholders for now.
 const projects: Project[] = [
     { title: "Residential Reroof", subtitle: "Cedar Park, TX", src: "https://i.ibb.co.com/qYKnkLSr/image.png" },
     { title: "Storm Damage Repair", subtitle: "Round Rock, TX", src: "https://i.ibb.co.com/QjdbMZS3/image.png" },
@@ -55,7 +56,7 @@ export default function ProjectGallery() {
             style={{ height: `${projects.length * 100}vh` }}
         >
             <div className="sticky top-0 h-screen w-full overflow-hidden">
-                {/* section heading, fades out as first card is still settled */}
+                {/* section heading */}
                 <div className="pointer-events-none absolute inset-x-0 top-0 z-[100] flex flex-col items-center pt-10 text-center">
                     <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#7cb83a]">
                         <span className="h-[2px] w-6 bg-[#7cb83a]" />
@@ -76,36 +77,40 @@ export default function ProjectGallery() {
                     return (
                         <div
                             key={project.title}
-                            className="absolute inset-0"
+                            className="absolute inset-0 will-change-transform"
                             style={{
                                 zIndex: i + 1,
                                 transform: `translateY(${translateY}%) scale(${scale})`,
                             }}
                         >
                             <div className="flex h-full w-full items-center justify-center p-4 sm:p-8">
-                                <div className="relative h-full w-full max-w-6xl overflow-hidden rounded-2xl shadow-[0_40px_80px_-24px_rgba(0,0,0,0.6)] sm:h-[86vh]">
-                                    <img
+                                <div className="relative h-full w-full max-w-7xl overflow-hidden rounded-3xl border border-white/10 bg-black/40 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] sm:h-[86vh]">
+                                    {/* Next.js Optimized High-Resolution Image */}
+                                    <Image
                                         src={project.src}
                                         alt={project.title}
-                                        className="h-full w-full object-cover"
+                                        fill
+                                        priority={i === 0}
+                                        sizes="(max-width: 1280px) 100vw, 1280px"
+                                        className="object-cover object-center antialiased"
                                         draggable={false}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                                     {/* index badge */}
-                                    <div className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/30 font-serif text-sm font-bold text-white backdrop-blur-sm">
+                                    <div className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-black/40 font-serif text-sm font-bold text-white backdrop-blur-md shadow-lg">
                                         {String(i + 1).padStart(2, "0")}
                                     </div>
 
                                     {/* caption */}
-                                    <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 sm:p-8">
+                                    <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 sm:p-10">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white sm:text-2xl">
+                                            <h3 className="text-xl font-bold text-white sm:text-3xl tracking-wide drop-shadow-md">
                                                 {project.title}
                                             </h3>
-                                            <p className="mt-1 text-sm text-white/70">{project.subtitle}</p>
+                                            <p className="mt-1.5 text-sm sm:text-base text-white/80 font-medium">{project.subtitle}</p>
                                         </div>
-                                        <span className="hidden rounded-full bg-[#7cb83a] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[#161616] sm:inline-block">
+                                        <span className="hidden rounded-full bg-[#7cb83a] px-6 py-3 text-xs font-bold uppercase tracking-wider text-[#161616] sm:inline-block shadow-lg transition-transform hover:scale-105">
                                             View Project
                                         </span>
                                     </div>
