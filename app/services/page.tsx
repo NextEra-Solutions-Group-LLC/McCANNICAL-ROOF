@@ -43,7 +43,7 @@ export default function Services() {
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
-            {/* এখানে pt-32 এবং sm:pt-40 বাড়িয়ে দেওয়া হয়েছে যাতে কন্টেন্ট নিচে নেমে আসে */}
+
             <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header row */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 sm:mb-20">

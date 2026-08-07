@@ -16,7 +16,7 @@ export default function CtaNewsletter({ bgImage = "https://i.ibb.co/60zVZpSn/ima
         if (email) {
             setSubmitted(true);
 
-            // ৩ সেকেন্ড পর ফর্মটি আবার আগের অবস্থায় ফিরিয়ে আনার জন্য
+
             setTimeout(() => {
                 setSubmitted(false);
                 setEmail("");

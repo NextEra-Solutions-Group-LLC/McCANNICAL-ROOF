@@ -25,7 +25,7 @@ const partners = [
 const marqueeItems = [...partners, ...partners, ...partners];
 
 interface TrustedPartnersProps {
-    bgImage?: string; // এখানে আপনার ব্যাকগ্রাউন্ড ইমেজের লিংক বা পাথ দিতে পারবেন
+    bgImage?: string;
 }
 
 export default function TrustedPartners({ bgImage = "https://i.ibb.co/hJydNDNv/image.png" }: TrustedPartnersProps) {

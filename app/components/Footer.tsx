@@ -29,7 +29,7 @@ export default function Footer() {
                     {/* Brand / Logo with Name side-by-side */}
                     <div className="max-w-md">
                         <div className="flex items-center gap-3">
-                            {/* লোগো আইকন */}
+
                             <div className="relative h-12 w-12 flex-shrink-0">
                                 <Image
                                     src="https://i.ibb.co/mVnWQGWh/image-removebg-preview-1.png"
@@ -39,7 +39,7 @@ export default function Footer() {
                                     priority
                                 />
                             </div>
-                            {/* কোম্পানির নাম টেক্সট আকারে */}
+
                             <div>
                                 <h2 className="text-xl font-bold tracking-wider text-white">MCCANNICAL</h2>
                                 <p className="text-[10px] font-semibold tracking-widest text-[#7cb83a]">ROOFING &amp; EXTERIORS</p>

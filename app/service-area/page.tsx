@@ -86,7 +86,7 @@ const areas = [
 export default function AreasWeServe() {
     return (
         <section className="relative bg-black text-white overflow-hidden">
-            {/* এখানে pt-32 এবং sm:pt-40 বাড়িয়ে দেওয়া হয়েছে যাতে কন্টেন্ট নিচে নেমে আসে */}
+
             <div className="mx-auto max-w-7xl pt-32 pb-20 px-6 sm:pt-40 sm:pb-28 sm:px-10 lg:px-14">
                 {/* Header */}
                 <div className="mb-12 max-w-xl text-center mx-auto">
