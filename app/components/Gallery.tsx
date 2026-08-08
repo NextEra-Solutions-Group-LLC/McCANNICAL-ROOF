@@ -10,16 +10,16 @@ type Project = {
 };
 
 const projects: Project[] = [
-    { title: "Residential Reroof", subtitle: "Cedar Park, TX", src: "https://i.ibb.co.com/qYKnkLSr/image.png" },
-    { title: "Storm Damage Repair", subtitle: "Round Rock, TX", src: "https://i.ibb.co.com/QjdbMZS3/image.png" },
-    { title: "Commercial Flat Roof", subtitle: "Austin, TX", src: "https://i.ibb.co.com/JFH5x44F/image.png" },
-    { title: "Gutter Replacement", subtitle: "Leander, TX", src: "https://i.ibb.co.com/yFRsg8Ws/image.png" },
-    { title: "Lakefront Home Roof", subtitle: "Lakeway, TX", src: "https://i.ibb.co.com/d0SqzjqG/image.png" },
-    { title: "Custom Fencing", subtitle: "Liberty Hill, TX", src: "https://i.ibb.co.com/Lh6z244H/image.png" },
-    { title: "Full Tear-Off & Reroof", subtitle: "Georgetown, TX", src: "https://i.ibb.co.com/zTwBWNC3/image.png" },
-    { title: "Emergency Tarping", subtitle: "Brushy Creek, TX", src: "https://i.ibb.co.com/0RB9z683/image.png" },
-    { title: "Luxury Home Exterior", subtitle: "Barton Creek, TX", src: "https://i.ibb.co.com/8L1XZqwD/image.png" },
-    { title: "Insurance Claim Reroof", subtitle: "Serenada, TX", src: "https://i.ibb.co.com/4ZL3sbK0/image.png" },
+    { title: "Residential Reroof", subtitle: "Cedar Park, TX", src: "https://i.ibb.co.com/r2TvC36w/image.png" },
+    { title: "Storm Damage Repair", subtitle: "Round Rock, TX", src: "https://i.ibb.co.com/YTh52Lc8/image.png" },
+    { title: "Commercial Flat Roof", subtitle: "Austin, TX", src: "https://i.ibb.co.com/qLzqQSvR/image.png" },
+    { title: "Gutter Replacement", subtitle: "Leander, TX", src: "https://i.ibb.co.com/yBhxDnHc/image.png" },
+    { title: "Lakefront Home Roof", subtitle: "Lakeway, TX", src: "https://i.ibb.co.com/pv4kmXjD/image.png" },
+    { title: "Custom Fencing", subtitle: "Liberty Hill, TX", src: "https://i.ibb.co.com/Q3d0r758/image.png" },
+    { title: "Full Tear-Off & Reroof", subtitle: "Georgetown, TX", src: "https://i.ibb.co.com/sp4LSrnV/image.png" },
+    { title: "Emergency Tarping", subtitle: "Brushy Creek, TX", src: "https://i.ibb.co.com/Y4rGXbvm/image.png" },
+    { title: "Luxury Home Exterior", subtitle: "Barton Creek, TX", src: "https://i.ibb.co.com/3mnnDzWR/image.pngg" },
+    { title: "Insurance Claim Reroof", subtitle: "Serenada, TX", src: "https://i.ibb.co.com/TxkM02w9/image.png" },
 ];
 
 export default function ProjectGallery() {
