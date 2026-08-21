@@ -4,22 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import { MapPin, RefreshCw } from 'lucide-react';
 
-interface Project {
-    id: string;
-    title: string;
-    locationName: string;
-    neighborhood: string;
-    city: string;
-    zipCode: string;
-    lat: number;
-    lng: number;
-    date: string;
-    rating: number;
-    description: string;
-    images: string[];
-    review: string;
-    clientName: string;
-}
+import { Project } from './NeighborhoodModal';
 
 interface MapComponentProps {
     projects: Project[];

@@ -16,7 +16,7 @@ import 'swiper/css/pagination';
 import data from '@/app/data/data.json';
 import MapComponent from './MapComponent';
 
-interface Project {
+export interface Project {
     id: string;
     title: string;
     locationName: string;
@@ -29,8 +29,11 @@ interface Project {
     rating: number;
     description: string;
     images: string[];
-    review: string;
-    clientName: string;
+    review?: string;
+    clientName?: string;
+    clientImage?: string;
+    ownerResponse?: string;
+    ownerImage?: string;
 }
 
 interface NeighborhoodModalProps {
@@ -69,6 +72,8 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
         };
     }, [isOpen]);
 
+    const projects = data.projects as Project[];
+
 
 
     // Keyboard navigation in lightbox
@@ -89,7 +94,7 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
 
     // Filter projects based on city selection AND search query
     const filteredProjects = useMemo(() => {
-        return data.projects.filter((project) => {
+        return projects.filter((project) => {
             // City filter
             if (activeCity && project.city.toLowerCase() !== activeCity.toLowerCase()) {
                 return false;
@@ -110,7 +115,7 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
             
             return true;
         });
-    }, [activeCity, searchQuery]);
+    }, [activeCity, searchQuery, projects]);
 
     // Project Navigation in Detail Subpage
     const currentProjectIndex = useMemo(() => {
@@ -134,18 +139,19 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
 
     // Dynamically extract reviews from all projects in the data store
     const reviews = useMemo(() => {
-        return data.projects
+        return projects
             .filter((p) => p.review && p.clientName)
             .map((p) => ({
                 id: `rev-${p.id}`,
-                name: p.clientName,
+                name: p.clientName || '',
+                clientImage: p.clientImage,
                 rating: p.rating,
-                text: p.review,
+                text: p.review || '',
                 date: p.date,
                 city: p.city,
                 projectId: p.id
             }));
-    }, []);
+    }, [projects]);
 
     // Handle search query change
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -153,7 +159,7 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
         setSearchQuery(query);
 
         // If the query matches a city name, highlight it automatically
-        const matchedCity = data.projects.find(p => p.city.toLowerCase() === query.toLowerCase());
+        const matchedCity = projects.find(p => p.city.toLowerCase() === query.toLowerCase());
         if (matchedCity) {
             setActiveCity(matchedCity.city);
         } else if (query === '') {
@@ -378,7 +384,7 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
                                                                             <div 
                                                                                 onClick={() => {
                                                                                     if (rev.projectId) {
-                                                                                        const proj = data.projects.find(p => p.id === rev.projectId);
+                                                                                        const proj = projects.find(p => p.id === rev.projectId);
                                                                                         if (proj) setSelectedProject(proj);
                                                                                     }
                                                                                 }}
@@ -398,12 +404,20 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
                                                                                     </p>
                                                                                 </div>
                                                                                 <div className="flex items-center gap-2 border-t border-white/5 pt-2 mt-2">
-                                                                                    <div 
-                                                                                        className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black text-white"
-                                                                                        style={{ backgroundColor: color }}
-                                                                                    >
-                                                                                        {initial}
-                                                                                    </div>
+                                                                                    {rev.clientImage ? (
+                                                                                        <img 
+                                                                                            src={rev.clientImage} 
+                                                                                            alt={rev.name} 
+                                                                                            className="w-6 h-6 rounded-full object-cover border border-white/10"
+                                                                                        />
+                                                                                    ) : (
+                                                                                        <div 
+                                                                                            className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black text-white"
+                                                                                            style={{ backgroundColor: color }}
+                                                                                        >
+                                                                                            {initial}
+                                                                                        </div>
+                                                                                    )}
                                                                                     <span className="text-xs font-semibold text-white tracking-wide group-hover/review:text-white transition-colors">{rev.name}</span>
                                                                                 </div>
                                                                             </div>
@@ -667,17 +681,52 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
                                                                         &ldquo;{selectedProject.review}&rdquo;
                                                                     </p>
                                                                     <div className="flex items-center gap-2.5">
-                                                                        <div 
-                                                                            className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-black text-white"
-                                                                            style={{ backgroundColor: getAvatarColor(selectedProject.clientName) }}
-                                                                        >
-                                                                            {selectedProject.clientName.trim().charAt(0).toUpperCase()}
-                                                                        </div>
+                                                                        {selectedProject.clientImage ? (
+                                                                            <img 
+                                                                                src={selectedProject.clientImage} 
+                                                                                alt={selectedProject.clientName || 'Client'} 
+                                                                                className="w-7 h-7 rounded-full object-cover border border-white/10"
+                                                                            />
+                                                                        ) : (
+                                                                            <div 
+                                                                                className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-black text-white"
+                                                                                style={{ backgroundColor: getAvatarColor(selectedProject.clientName || '') }}
+                                                                            >
+                                                                                {selectedProject.clientName ? selectedProject.clientName.trim().charAt(0).toUpperCase() : 'C'}
+                                                                            </div>
+                                                                        )}
                                                                         <div>
-                                                                            <h5 className="text-xs font-bold text-white">{selectedProject.clientName}</h5>
-                                                                            <span className="text-[9px] font-semibold text-slate-500 uppercase tracking-wide">Verified Owner</span>
+                                                                            <h5 className="text-xs font-bold text-white">{selectedProject.clientName || 'Verified Client'}</h5>
+                                                                            <span className="text-[9px] font-semibold text-slate-500 uppercase tracking-wide">Verified Customer</span>
                                                                         </div>
                                                                     </div>
+
+                                                                    {selectedProject.ownerResponse && (
+                                                                        <div className="mt-4 pl-4 border-l-2 border-[#65C142]/30 flex flex-col gap-2">
+                                                                            <div className="flex items-center gap-2">
+                                                                                {selectedProject.ownerImage ? (
+                                                                                    <img 
+                                                                                        src={selectedProject.ownerImage} 
+                                                                                        alt="Will McCann" 
+                                                                                        className="w-6 h-6 rounded-full object-cover border border-[#65C142]/20"
+                                                                                    />
+                                                                                ) : (
+                                                                                    <div className="w-6 h-6 rounded-full bg-[#65C142]/20 flex items-center justify-center text-[10px] font-bold text-[#65C142]">
+                                                                                        WM
+                                                                                    </div>
+                                                                                )}
+                                                                                <div>
+                                                                                    <h5 className="text-[11px] font-bold text-white flex items-center gap-1.5">
+                                                                                        Will McCann
+                                                                                        <span className="text-[8px] bg-[#65C142]/20 text-[#65C142] px-1.5 py-0.5 rounded font-extrabold uppercase tracking-wide">Owner</span>
+                                                                                    </h5>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p className="text-xs text-slate-300 italic leading-relaxed bg-white/[0.01] border border-white/5 rounded-xl p-3">
+                                                                                &ldquo;{selectedProject.ownerResponse}&rdquo;
+                                                                            </p>
+                                                                        </div>
+                                                                    )}
                                                                 </div>
                                                             </div>
                                                         )}
@@ -695,7 +744,7 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
                                     }`}
                                 >
                                     <MapComponent 
-                                        projects={data.projects}
+                                        projects={projects}
                                         activeCity={activeCity}
                                         onSelectCity={setActiveCity}
                                         selectedProject={selectedProject}

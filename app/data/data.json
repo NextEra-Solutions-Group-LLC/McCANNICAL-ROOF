@@ -18,7 +18,10 @@
         "https://i.ibb.co/7MhX73T/image.png"
       ],
       "review": "Will McCann from McCannical Roofing is my favorite 'go-to' guy for anything roof. His crew was fast and clean!",
-      "clientName": "Mary Phillips"
+      "clientName": "Mary Phillips",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you Mary! It was a pleasure working with you to fix those leaks. Glad we could help!"
     },
     {
       "id": "proj-2",
@@ -38,7 +41,10 @@
         "https://i.ibb.co/cKCrMpPP/image.png"
       ],
       "review": "We had an outstanding experience with McCannical Roofing. They handled everything with our insurance adjuster and got it done.",
-      "clientName": "Freddy Villatoro"
+      "clientName": "Freddy Villatoro",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you Freddy! Navigating insurance adjusters can be tricky, but we always aim to make the process as seamless as possible for our clients."
     },
     {
       "id": "proj-3",
@@ -58,7 +64,10 @@
         "https://i.ibb.co/qYrPmb6D/image.png"
       ],
       "review": "I had my roof replaced due to storm damage & was so pleased had them do the outside of the house painting as well.",
-      "clientName": "Sheryl Robertson"
+      "clientName": "Sheryl Robertson",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thanks Sheryl! Happy we could assist with both the reroof and the exterior painting. The house looks fantastic!"
     },
     {
       "id": "proj-4",
@@ -78,7 +87,10 @@
         "https://i.ibb.co/DD9WYMSS/image.png"
       ],
       "review": "Will and his crew were awesome to deal with start to finish on our project. They were professional and fast.",
-      "clientName": "Kelly Broussard"
+      "clientName": "Kelly Broussard",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you! We take pride in delivering fast and professional services from start to finish."
     },
     {
       "id": "proj-5",
@@ -98,7 +110,10 @@
         "https://i.ibb.co/sp9SbJTt/image.png"
       ],
       "review": "We had a great experience working with McCannical Roofing and the team. Highly recommend them for any roof repairs.",
-      "clientName": "Willy Farrell"
+      "clientName": "Willy Farrell",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thanks! The team always strives to provide clean and reliable roof repairs."
     },
     {
       "id": "proj-6",
@@ -118,7 +133,10 @@
         "https://i.ibb.co/WNPNsmCg/image.png"
       ],
       "review": "Will and his crew do awesome work. They got things done quickly and left the yard cleaner than they found it.",
-      "clientName": "kemper modlin"
+      "clientName": "kemper modlin",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you! We always try to leave the job site cleaner than we found it. Appreciate the feedback!"
     },
     {
       "id": "proj-7",
@@ -138,7 +156,10 @@
         "https://i.ibb.co/NgXRjz4c/image.png"
       ],
       "review": "Will met with the insurance adjuster, took care of all the details, and made the whole roof replacement stress-free.",
-      "clientName": "Maggie"
+      "clientName": "Maggie",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thanks! Helping with insurance adjuster meetings is part of our commitment to taking stress off our clients."
     },
     {
       "id": "proj-8",
@@ -158,7 +179,10 @@
         "https://i.ibb.co/0pcdX0FT/image.png"
       ],
       "review": "We've had our fair share of roof issues over the years, and Will has become our trusted resource. Fast response time!",
-      "clientName": "Eric Tello"
+      "clientName": "Eric Tello",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you! Response time is critical during leaks, glad we could prevent further damage."
     },
     {
       "id": "proj-9",
@@ -178,7 +202,10 @@
         "https://i.ibb.co/3H4Lz57/image.png"
       ],
       "review": "Professional crew. They finished the whole roof in just one day and did a great clean up.",
-      "clientName": "Mary Phillips"
+      "clientName": "Mary Phillips",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you! Completing the project in one day while keeping the quality high is always our goal."
     },
     {
       "id": "proj-10",
@@ -198,7 +225,10 @@
         "https://i.ibb.co/9mf2cgwV/image.png"
       ],
       "review": "Saved us from massive water damage! Incredibly fast response.",
-      "clientName": "Freddy Villatoro"
+      "clientName": "Freddy Villatoro",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thanks! Quick response is our priority during roof emergencies."
     },
     {
       "id": "proj-11",
@@ -218,7 +248,10 @@
         "https://i.ibb.co/qYrPmb6D/image.png"
       ],
       "review": "A masterpiece! The modern metallic look matches our home architecture perfectly.",
-      "clientName": "Mary Phillips"
+      "clientName": "Mary Phillips",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Appreciate the feedback! That metallic finish really fits the house profile."
     },
     {
       "id": "proj-12",
@@ -236,9 +269,7 @@
         "https://i.ibb.co/cKCrMpPP/image.png",
         "https://i.ibb.co/DD9WYMSS/image.png",
         "https://i.ibb.co/WNPNsmCg/image.png"
-      ],
-      "review": "Very honest assessment, fixed the wind damage quickly for a reasonable price.",
-      "clientName": "Willy Farrell"
+      ]
     },
     {
       "id": "proj-13",
@@ -247,7 +278,7 @@
       "neighborhood": "Kyle South",
       "city": "Kyle",
       "zipCode": "78640",
-      "lat": 30.0210,
+      "lat": 30.021,
       "lng": -97.8797,
       "date": "Aug 15, 2026",
       "rating": 5,
@@ -258,7 +289,9 @@
         "https://i.ibb.co/NgXRjz4c/image.png"
       ],
       "review": "Very neat installation. The new ridge caps make the roof look brand new.",
-      "clientName": "Sheryl Robertson"
+      "clientName": "Sheryl Robertson",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg"
     },
     {
       "id": "proj-14",
@@ -278,7 +311,10 @@
         "https://i.ibb.co/NgXRjz4c/image.png"
       ],
       "review": "Absolutely outstanding! The team was super professional and the roof looks amazing.",
-      "clientName": "Freddy Villatoro"
+      "clientName": "Freddy Villatoro",
+      "clientImage": "/images/client_avatar.jpg",
+      "ownerImage": "/images/owner_avatar.jpg",
+      "ownerResponse": "Thank you so much! Our team was glad to help make your roof look amazing."
     }
   ]
 }
