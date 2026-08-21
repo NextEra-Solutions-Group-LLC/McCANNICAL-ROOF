@@ -1,0 +1,284 @@
+{
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Roof & Window Leak Repairs",
+      "locationName": "Taylor, TX",
+      "neighborhood": "Taylor East",
+      "city": "Taylor",
+      "zipCode": "76574",
+      "lat": 30.5708,
+      "lng": -97.4164,
+      "date": "May 20, 2026",
+      "rating": 5,
+      "description": "After identifying persistent leaks from heavy rains, we quickly responded by assessing the flashing and replacing damaged decking. Upgraded the area with new architectural shingles.",
+      "images": [
+        "https://i.ibb.co/3H4Lz57/image.png",
+        "https://i.ibb.co/9mf2cgwV/image.png",
+        "https://i.ibb.co/7MhX73T/image.png"
+      ],
+      "review": "Will McCann from McCannical Roofing is my favorite 'go-to' guy for anything roof. His crew was fast and clean!",
+      "clientName": "Mary Phillips"
+    },
+    {
+      "id": "proj-2",
+      "title": "Class 3 GAF Timberline HDZ (Oyster Gray)",
+      "locationName": "Hudson Bend, TX",
+      "neighborhood": "Hudson Bend",
+      "city": "Lakeway",
+      "zipCode": "78734",
+      "lat": 30.4063,
+      "lng": -97.9231,
+      "date": "Apr 9, 2026",
+      "rating": 5,
+      "description": "This client reached out after purchasing this beautiful home in Hudson Bend. They needed a full roof replacement due to storm damage and wind exposure. We upgraded them to GAF Timberline HDZ in Oyster Gray.",
+      "images": [
+        "https://i.ibb.co/9mf2cgwV/image.png",
+        "https://i.ibb.co/7MhX73T/image.png",
+        "https://i.ibb.co/cKCrMpPP/image.png"
+      ],
+      "review": "We had an outstanding experience with McCannical Roofing. They handled everything with our insurance adjuster and got it done.",
+      "clientName": "Freddy Villatoro"
+    },
+    {
+      "id": "proj-3",
+      "title": "Residential Reroof & Siding Paint",
+      "locationName": "Cedar Park, TX",
+      "neighborhood": "Buttercup Creek",
+      "city": "Cedar Park",
+      "zipCode": "78613",
+      "lat": 30.5182,
+      "lng": -97.8482,
+      "date": "Jun 15, 2026",
+      "rating": 5,
+      "description": "Full tear-off and replacement of asphalt shingles on a two-story home. In addition to the roof replacement, we repaired the external siding and applied premium weather-resistant paint.",
+      "images": [
+        "https://i.ibb.co/7MhX73T/image.png",
+        "https://i.ibb.co/cKCrMpPP/image.png",
+        "https://i.ibb.co/qYrPmb6D/image.png"
+      ],
+      "review": "I had my roof replaced due to storm damage & was so pleased had them do the outside of the house painting as well.",
+      "clientName": "Sheryl Robertson"
+    },
+    {
+      "id": "proj-4",
+      "title": "Storm Damage Repair & Inspection",
+      "locationName": "Round Rock, TX",
+      "neighborhood": "Forest Ridge",
+      "city": "Round Rock",
+      "zipCode": "78664",
+      "lat": 30.5212,
+      "lng": -97.6521,
+      "date": "Jul 11, 2026",
+      "rating": 5,
+      "description": "Assessed severe hail damage on a residential property. Facilitated the insurance adjustment process and completed the roof repair including replacement of multiple ridge caps and vent flashing.",
+      "images": [
+        "https://i.ibb.co/cKCrMpPP/image.png",
+        "https://i.ibb.co/qYrPmb6D/image.png",
+        "https://i.ibb.co/DD9WYMSS/image.png"
+      ],
+      "review": "Will and his crew were awesome to deal with start to finish on our project. They were professional and fast.",
+      "clientName": "Kelly Broussard"
+    },
+    {
+      "id": "proj-5",
+      "title": "Commercial Flat Roof Coating",
+      "locationName": "Austin, TX",
+      "neighborhood": "Downtown Austin",
+      "city": "Austin",
+      "zipCode": "78701",
+      "lat": 30.2672,
+      "lng": -97.7431,
+      "date": "Feb 18, 2026",
+      "rating": 5,
+      "description": "Applied commercial silicone flat roof coating system to stop minor leaks and improve energy efficiency. The reflective white coating helps lower building cooling costs by up to 20%.",
+      "images": [
+        "https://i.ibb.co/qYrPmb6D/image.png",
+        "https://i.ibb.co/DD9WYMSS/image.png",
+        "https://i.ibb.co/sp9SbJTt/image.png"
+      ],
+      "review": "We had a great experience working with McCannical Roofing and the team. Highly recommend them for any roof repairs.",
+      "clientName": "Willy Farrell"
+    },
+    {
+      "id": "proj-6",
+      "title": "Gutter Replacement & Leaf Protection",
+      "locationName": "Leander, TX",
+      "neighborhood": "Crystal Falls",
+      "city": "Leander",
+      "zipCode": "78641",
+      "lat": 30.5788,
+      "lng": -97.8531,
+      "date": "Mar 22, 2026",
+      "rating": 5,
+      "description": "Installed new 6-inch seamless aluminum gutters and downspouts. Added premium leaf filter guards to prevent future clogging and ensure proper drainage away from the home's foundation.",
+      "images": [
+        "https://i.ibb.co/DD9WYMSS/image.png",
+        "https://i.ibb.co/sp9SbJTt/image.png",
+        "https://i.ibb.co/WNPNsmCg/image.png"
+      ],
+      "review": "Will and his crew do awesome work. They got things done quickly and left the yard cleaner than they found it.",
+      "clientName": "kemper modlin"
+    },
+    {
+      "id": "proj-7",
+      "title": "Lakefront Home Custom Slate Roof",
+      "locationName": "Lakeway, TX",
+      "neighborhood": "Lake Travis",
+      "city": "Lakeway",
+      "zipCode": "78734",
+      "lat": 30.3646,
+      "lng": -97.9733,
+      "date": "Jan 30, 2026",
+      "rating": 5,
+      "description": "Restored a beautiful slate roof on a custom lakefront property. Fixed structural underlayment problems and replaced cracked tiles using color-matched premium natural slate.",
+      "images": [
+        "https://i.ibb.co/sp9SbJTt/image.png",
+        "https://i.ibb.co/WNPNsmCg/image.png",
+        "https://i.ibb.co/NgXRjz4c/image.png"
+      ],
+      "review": "Will met with the insurance adjuster, took care of all the details, and made the whole roof replacement stress-free.",
+      "clientName": "Maggie"
+    },
+    {
+      "id": "proj-8",
+      "title": "Custom Wood Fencing Installation",
+      "locationName": "Liberty Hill, TX",
+      "neighborhood": "Liberty Hill West",
+      "city": "Liberty Hill",
+      "zipCode": "78642",
+      "lat": 30.6649,
+      "lng": -97.9228,
+      "date": "May 2, 2026",
+      "rating": 5,
+      "description": "Designed and built a premium cedar privacy fence for a large backyard. Features heavy-duty posts, double-sided pickets, and custom-welded steel gates to match the property line.",
+      "images": [
+        "https://i.ibb.co/WNPNsmCg/image.png",
+        "https://i.ibb.co/NgXRjz4c/image.png",
+        "https://i.ibb.co/0pcdX0FT/image.png"
+      ],
+      "review": "We've had our fair share of roof issues over the years, and Will has become our trusted resource. Fast response time!",
+      "clientName": "Eric Tello"
+    },
+    {
+      "id": "proj-9",
+      "title": "Georgetown Hail Damage Reroof",
+      "locationName": "Georgetown, TX",
+      "neighborhood": "Serenada",
+      "city": "Georgetown",
+      "zipCode": "78628",
+      "lat": 30.6621,
+      "lng": -97.6892,
+      "date": "Jun 2, 2026",
+      "rating": 5,
+      "description": "Completed a comprehensive reroof following a major hail storm. Replaced all decking, upgraded the underlayment to synthetic felt, and installed impact-resistant Class 4 architectural shingles.",
+      "images": [
+        "https://i.ibb.co/NgXRjz4c/image.png",
+        "https://i.ibb.co/0pcdX0FT/image.png",
+        "https://i.ibb.co/3H4Lz57/image.png"
+      ],
+      "review": "Professional crew. They finished the whole roof in just one day and did a great clean up.",
+      "clientName": "Mary Phillips"
+    },
+    {
+      "id": "proj-10",
+      "title": "Emergency Roof Tarping & Repair",
+      "locationName": "Brushy Creek, TX",
+      "neighborhood": "Brushy Creek",
+      "city": "Round Rock",
+      "zipCode": "78681",
+      "lat": 30.5098,
+      "lng": -97.7412,
+      "date": "Jul 20, 2026",
+      "rating": 5,
+      "description": "Responded within 2 hours to a tree branch impact on a roof. Cleared the debris, installed heavy-duty weatherproofing tarp, and repaired the rafters and deck structural framing the following morning.",
+      "images": [
+        "https://i.ibb.co/0pcdX0FT/image.png",
+        "https://i.ibb.co/3H4Lz57/image.png",
+        "https://i.ibb.co/9mf2cgwV/image.png"
+      ],
+      "review": "Saved us from massive water damage! Incredibly fast response.",
+      "clientName": "Freddy Villatoro"
+    },
+    {
+      "id": "proj-11",
+      "title": "Luxury Metal Standing Seam Roof",
+      "locationName": "West Lake Hills, TX",
+      "neighborhood": "West Lake Hills",
+      "city": "Austin",
+      "zipCode": "78746",
+      "lat": 30.3012,
+      "lng": -97.8012,
+      "date": "Aug 5, 2026",
+      "rating": 5,
+      "description": "High-end standing seam metal roof installation on a modern architectural home. Designed for maximum longevity, extreme wind resistance, and modern aesthetics.",
+      "images": [
+        "https://i.ibb.co/3H4Lz57/image.png",
+        "https://i.ibb.co/7MhX73T/image.png",
+        "https://i.ibb.co/qYrPmb6D/image.png"
+      ],
+      "review": "A masterpiece! The modern metallic look matches our home architecture perfectly.",
+      "clientName": "Mary Phillips"
+    },
+    {
+      "id": "proj-12",
+      "title": "Buda Shingle Repair & Gutters",
+      "locationName": "Buda, TX",
+      "neighborhood": "Buda Hills",
+      "city": "Buda",
+      "zipCode": "78610",
+      "lat": 30.0841,
+      "lng": -97.8436,
+      "date": "Aug 12, 2026",
+      "rating": 5,
+      "description": "Completed minor roof shingle repair due to high wind damages. Also cleaned, re-aligned, and repaired existing residential gutters to stop siding stains.",
+      "images": [
+        "https://i.ibb.co/cKCrMpPP/image.png",
+        "https://i.ibb.co/DD9WYMSS/image.png",
+        "https://i.ibb.co/WNPNsmCg/image.png"
+      ],
+      "review": "Very honest assessment, fixed the wind damage quickly for a reasonable price.",
+      "clientName": "Willy Farrell"
+    },
+    {
+      "id": "proj-13",
+      "title": "Kyle Ridge Cap Replacement",
+      "locationName": "Kyle, TX",
+      "neighborhood": "Kyle South",
+      "city": "Kyle",
+      "zipCode": "78640",
+      "lat": 30.0210,
+      "lng": -97.8797,
+      "date": "Aug 15, 2026",
+      "rating": 5,
+      "description": "Replaced worn-out ridge cap shingles on a single family home. Upgraded to high-profile GAF ridge caps to improve ventilation performance and roof aesthetics.",
+      "images": [
+        "https://i.ibb.co/DD9WYMSS/image.png",
+        "https://i.ibb.co/sp9SbJTt/image.png",
+        "https://i.ibb.co/NgXRjz4c/image.png"
+      ],
+      "review": "Very neat installation. The new ridge caps make the roof look brand new.",
+      "clientName": "Sheryl Robertson"
+    },
+    {
+      "id": "proj-14",
+      "title": "Dripping Springs Metal Reroof",
+      "locationName": "Dripping Springs, TX",
+      "neighborhood": "Dripping Springs East",
+      "city": "Dripping Springs",
+      "zipCode": "78620",
+      "lat": 30.1902,
+      "lng": -98.0867,
+      "date": "Aug 19, 2026",
+      "rating": 5,
+      "description": "Upgraded a traditional shingle roof to a beautiful dark bronze standing seam metal roof. The metal panels provide unmatched longevity and high energy efficiency for the Texas heat.",
+      "images": [
+        "https://i.ibb.co/sp9SbJTt/image.png",
+        "https://i.ibb.co/WNPNsmCg/image.png",
+        "https://i.ibb.co/NgXRjz4c/image.png"
+      ],
+      "review": "Absolutely outstanding! The team was super professional and the roof looks amazing.",
+      "clientName": "Freddy Villatoro"
+    }
+  ]
+}
