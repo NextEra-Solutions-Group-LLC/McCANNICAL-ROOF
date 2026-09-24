@@ -93,8 +93,12 @@ export default function Contact() {
                                         <Clock size={22} />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Working Hours</p>
-                                        <p className="text-white text-sm sm:text-base font-medium mt-1">Mon - Sat: 8:00 AM - 6:00 PM</p>
+                                        <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Service Hours</p>
+                                        <div className="text-white text-sm sm:text-base font-medium mt-1 leading-snug space-y-0.5">
+                                            <p>Mon-Fri: 7:00am-7:00pm</p>
+                                            <p>Sat: 7:00am-2:00pm</p>
+                                            <p>Sun: Closed</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
