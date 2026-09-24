@@ -695,38 +695,6 @@
     "": ""
   },
   {
-    "id": "proj-1",
-    "title": "Roof & Window Leak Repairs - Taylor",
-    "locationName": "Taylor, TX",
-    "neighborhood": "Taylor",
-    "city": "Taylor",
-    "zipCode": "",
-    "lat": 30.5708,
-    "lng": -97.4092,
-    "date": "May 20, 2026",
-    "rating": 5,
-    "description": "Two broken vents were compromising the home's ventilation, which needed urgent attention for the property sale. We replaced the damaged vents and conducted necessary roof repairs, enabling the client to successfully close on their house in Austin.",
-    "images": [
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/217.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/218.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/220.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/221.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/222.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/223.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/224.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/225.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/226.jpg",
-      "https://pub-b00c52c66ce54226819a001b36ea18e1.r2.dev/227.jpg"
-    ],
-    "state": "TX",
-    "review": "As a Realtor, I never hesitate recommending Will to my clients or other agents, he is very professional and good work!!",
-    "clientName": "Trissa Williams",
-    "clientImage": "/images/client_avatar.jpg",
-    "ownerImage": "/images/owner_avatar.jpg",
-    "ownerResponse": "Thank you so much for the kind words, Ms. Buske! We truly appreciate you recommending us to your clients - it means a lot to hear that you feel confident in our professionalism and quality of work. We're always here whenever you or your clients need us!",
-    "": ""
-  },
-  {
     "id": "proj-12",
     "title": "Roof & Window Leak Repairs - Taylor",
     "locationName": "Taylor, TX",
