@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
@@ -11,7 +12,12 @@ export default function Footer() {
         }
     };
 
-    const services = ["Residential Roofing", "Commercial Roofing", "Gutters", "Fencing"];
+    const services = [
+        { name: "Residential Roofing", href: "/services/residential-roofing" },
+        { name: "Commercial Roofing", href: "/services/commercial-roofing" },
+        { name: "Professional Gutters", href: "/services/professional-gutters" },
+        { name: "Professional Fencing", href: "/services/professional-fencing" },
+    ];
 
     return (
         <footer className="relative overflow-hidden bg-[#161616] text-white">
@@ -41,7 +47,7 @@ export default function Footer() {
                             </div>
 
                             <div>
-                                <h2 className="text-xl font-bold tracking-wider text-white">MCCANNICAL</h2>
+                                <h2 className="text-xl font-bold tracking-wider text-white">McCANNICAL</h2>
                                 <p className="text-[10px] font-semibold tracking-widest text-[#7cb83a]">ROOFING &amp; EXTERIORS</p>
                             </div>
                         </div>
@@ -58,13 +64,13 @@ export default function Footer() {
                         <h3 className="mb-5 text-xl font-bold">Services</h3>
                         <ul className="space-y-3.5">
                             {services.map((service) => (
-                                <li key={service}>
-                                    <a
-                                        href="#"
+                                <li key={service.name}>
+                                    <Link
+                                        href={service.href}
                                         className="text-[15px] text-white/80 transition-colors hover:text-[#7cb83a]"
                                     >
-                                        {service}
-                                    </a>
+                                        {service.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

@@ -115,7 +115,7 @@ export default function Hero() {
                             <p className="text-white font-bold text-sm leading-tight">
                                 Will McCann
                             </p>
-                            <p className="text-gray-400 text-xs">Owner &amp; Master Roofer</p>
+                            <p className="text-gray-400 text-xs">Owner</p>
                         </div>
                         <div className="ml-2 flex items-center gap-0.5 text-amber-400">
                             {[...Array(5)].map((_, i) => (
