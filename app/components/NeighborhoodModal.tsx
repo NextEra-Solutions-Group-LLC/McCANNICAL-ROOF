@@ -528,7 +528,7 @@ export default function NeighborhoodModal({ isOpen, onClose }: NeighborhoodModal
                                                                             <div className="flex items-center justify-between border-t border-white/5 pt-3 mt-auto">
                                                                                 <span className="text-[10px] font-extrabold uppercase text-slate-300 tracking-wider flex items-center gap-1">
                                                                                     <MapPin size={11} className="text-[#65C142]" />
-                                                                                    {project.neighborhood}, {project.city}
+                                                                                    {project.locationName}
                                                                                 </span>
                                                                                 <span className="text-[10px] font-bold text-[#65C142] group-hover:underline flex items-center gap-0.5">
                                                                                     View Details
