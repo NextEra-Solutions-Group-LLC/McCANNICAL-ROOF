@@ -192,7 +192,7 @@ export default function Hero() {
                             className="absolute bottom-10 left-2 sm:left-4 z-30 bg-[#65C142] rounded-2xl px-6 py-4 shadow-[0_15px_35px_rgba(101,193,66,0.4)] text-center"
                         >
                             <p className="text-2xl font-black text-white leading-none">
-                                22+
+                                10+
                             </p>
                             <p className="text-white text-[9px] font-bold uppercase tracking-wider mt-1">
                                 Years Exp.
