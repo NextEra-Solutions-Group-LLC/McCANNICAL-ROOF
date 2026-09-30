@@ -62,7 +62,7 @@ export default function FloatingActions() {
             {/* ---------------- Floating action cluster ---------------- */}
             <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
                 {/* Book Appointment Button */}
-                <motion.button
+                {/* <motion.button
                     onClick={() => setIsModalOpen(true)}
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.96 }}
@@ -72,7 +72,7 @@ export default function FloatingActions() {
                     <span className="hidden sm:inline whitespace-nowrap">
                         Book Appointment
                     </span>
-                </motion.button>
+                </motion.button> */}
 
                 {/* Direct Call Button (Mobile Only) */}
                 <motion.button

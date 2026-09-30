@@ -12,16 +12,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Home - McCannical Roofing",
+  metadataBase: new URL("https://mccannicalroofing.com"),
+  title: "McCannical Roofing",
   description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, painting, fencing, siding & windows",
   openGraph: {
-    title: "Home - McCannical Roofing",
+    title: "McCannical Roofing",
     description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, painting, fencing, siding & windows",
     url: "https://mccannicalroofing.com/",
     siteName: "McCannical Roofing",
     images: [
       {
-        url: "https://i.ibb.co/mVnWQGWh/image-removebg-preview-1.png",
+        url: "/og-img.jpg",
         width: 1200,
         height: 630,
         alt: "McCannical Roofing & Exteriors",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Home - McCannical Roofing",
     description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, painting, fencing, siding & windows",
-    images: ["https://i.ibb.co/mVnWQGWh/image-removebg-preview-1.png"],
+    images: ["/og-img.jpg"],
   },
 };
 

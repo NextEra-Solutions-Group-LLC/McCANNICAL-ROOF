@@ -1,16 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Sparkles, Loader2 } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        service: "Residential Roofing",
+        msg: "",
+    });
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    ) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitted(true);
-        //form submitaion logic
+        setLoading(true);
+        setErrorMsg(null);
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || "Failed to send message.");
+            }
+
+            setSubmitted(true);
+            setFormData({
+                name: "",
+                phone: "",
+                email: "",
+                service: "Residential Roofing",
+                msg: "",
+            });
+        } catch (err: any) {
+            setErrorMsg(err.message || "Something went wrong. Please try again.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -132,6 +177,12 @@ export default function Contact() {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-6">
+                                    {errorMsg && (
+                                        <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+                                            {errorMsg}
+                                        </div>
+                                    )}
+
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div>
                                             <label className="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">
@@ -139,7 +190,10 @@ export default function Contact() {
                                             </label>
                                             <input
                                                 type="text"
+                                                name="name"
                                                 required
+                                                value={formData.name}
+                                                onChange={handleChange}
                                                 placeholder="John Doe"
                                                 className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#65C142] transition-colors"
                                             />
@@ -150,7 +204,10 @@ export default function Contact() {
                                             </label>
                                             <input
                                                 type="tel"
+                                                name="phone"
                                                 required
+                                                value={formData.phone}
+                                                onChange={handleChange}
                                                 placeholder="+1 (512) 000-0000"
                                                 className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#65C142] transition-colors"
                                             />
@@ -164,7 +221,10 @@ export default function Contact() {
                                             </label>
                                             <input
                                                 type="email"
+                                                name="email"
                                                 required
+                                                value={formData.email}
+                                                onChange={handleChange}
                                                 placeholder="john@example.com"
                                                 className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#65C142] transition-colors"
                                             />
@@ -173,12 +233,17 @@ export default function Contact() {
                                             <label className="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">
                                                 Service Required
                                             </label>
-                                            <select className="w-full bg-[#161a20] border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#65C142] transition-colors">
-                                                <option value="residential">Residential Roofing</option>
-                                                <option value="commercial">Commercial Roofing</option>
-                                                <option value="gutters">Professional Gutters</option>
-                                                <option value="fencing">Professional Fencing</option>
-                                                <option value="inspection">Free Inspection</option>
+                                            <select
+                                                name="service"
+                                                value={formData.service}
+                                                onChange={handleChange}
+                                                className="w-full bg-[#161a20] border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#65C142] transition-colors"
+                                            >
+                                                <option value="Residential Roofing">Residential Roofing</option>
+                                                <option value="Commercial Roofing">Commercial Roofing</option>
+                                                <option value="Professional Gutters">Professional Gutters</option>
+                                                <option value="Professional Fencing">Professional Fencing</option>
+                                                <option value="Free Inspection">Free Inspection</option>
                                             </select>
                                         </div>
                                     </div>
@@ -189,7 +254,10 @@ export default function Contact() {
                                         </label>
                                         <textarea
                                             rows={4}
+                                            name="msg"
                                             required
+                                            value={formData.msg}
+                                            onChange={handleChange}
                                             placeholder="Tell us about your project details..."
                                             className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#65C142] transition-colors resize-none"
                                         />
@@ -197,11 +265,20 @@ export default function Contact() {
 
                                     <button
                                         type="submit"
-                                        className="relative group w-full inline-flex items-center justify-center gap-2 bg-[#65C142] text-white font-semibold py-4 rounded-xl overflow-hidden transition-colors duration-300 hover:bg-[#52a034] shadow-[0_10px_25px_rgba(101,193,66,0.3)] cursor-pointer"
+                                        disabled={loading}
+                                        className="relative group w-full inline-flex items-center justify-center gap-2 bg-[#65C142] text-white font-semibold py-4 rounded-xl overflow-hidden transition-colors duration-300 hover:bg-[#52a034] shadow-[0_10px_25px_rgba(101,193,66,0.3)] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                                     >
                                         <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12" />
                                         <span className="relative flex items-center gap-2">
-                                            Send Message <Send size={17} />
+                                            {loading ? (
+                                                <>
+                                                    <Loader2 className="animate-spin" size={17} /> Sending...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    Send Message <Send size={17} />
+                                                </>
+                                            )}
                                         </span>
                                     </button>
                                 </form>
