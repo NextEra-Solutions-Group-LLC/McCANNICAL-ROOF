@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface FaqItem {
@@ -60,20 +60,6 @@ export default function Faq({ bgImage = "https://i.ibb.co/hJZgRNtg/image.png" }:
     // Open the first item by default
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-    // Generate random styling for hail streaks on the client side
-    const [hails, setHails] = useState<Array<{ id: number; left: string; height: string; duration: string; delay: string }>>([]);
-
-    useEffect(() => {
-        const hailList = Array.from({ length: 28 }).map((_, i) => ({
-            id: i,
-            left: `${Math.random() * 100}vw`,
-            height: `${30 + Math.random() * 50}px`,
-            duration: `${2 + Math.random() * 3}s`,
-            delay: `${Math.random() * 4}s`,
-        }));
-        setHails(hailList);
-    }, []);
-
     const toggleAccordion = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
@@ -85,29 +71,6 @@ export default function Faq({ bgImage = "https://i.ibb.co/hJZgRNtg/image.png" }:
                 backgroundImage: `linear-gradient(to bottom, rgba(16, 19, 23, 0.92), rgba(16, 19, 23, 0.95)), url(${bgImage})`
             }}
         >
-            {/* Falling hail streaks animation */}
-            <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-                {hails.map((h) => (
-                    <span
-                        key={h.id}
-                        className="absolute top-[-10%] w-[2px] opacity-35"
-                        style={{
-                            left: h.left,
-                            height: h.height,
-                            background: "linear-gradient(180deg, transparent, #d7e4f0 60%, transparent)",
-                            animation: `fall ${h.duration} linear infinite`,
-                            animationDelay: h.delay,
-                        }}
-                    />
-                ))}
-            </div>
-
-            <style jsx global>{`
-                @keyframes fall {
-                    to { transform: translateY(120vh); }
-                }
-            `}</style>
-
             <div className="max-w-[820px] mx-auto relative z-10">
                 {/* Eyebrow */}
                 <motion.div
@@ -162,10 +125,11 @@ export default function Faq({ bgImage = "https://i.ibb.co/hJZgRNtg/image.png" }:
                                 >
                                     {/* Number badge */}
                                     <span
-                                        className={`shrink-0 font-bold text-xs w-[26px] h-[26px] rounded-full border flex items-center justify-center transition-all duration-250 ${isOpen
-                                            ? "text-[#101317] bg-[#65C142] border-[#65C142]"
-                                            : "text-[#65C142] border-white/20 bg-white/5"
-                                            }`}
+                                        className={`shrink-0 font-bold text-xs w-[26px] h-[26px] rounded-full border flex items-center justify-center transition-all duration-250 ${
+                                            isOpen
+                                                ? "text-[#101317] bg-[#65C142] border-[#65C142]"
+                                                : "text-[#65C142] border-white/20 bg-white/5"
+                                        }`}
                                     >
                                         {item.num}
                                     </span>
@@ -176,8 +140,9 @@ export default function Faq({ bgImage = "https://i.ibb.co/hJZgRNtg/image.png" }:
                                     <span className="absolute right-[24px] top-1/2 -translate-y-1/2 w-[16px] h-[16px] shrink-0">
                                         <span className="absolute bg-[#65C142] rounded-[2px] transition-transform duration-300 w-[16px] h-[2px] top-[7px] left-0" />
                                         <span
-                                            className={`absolute bg-[#65C142] rounded-[2px] transition-transform duration-300 w-[2px] h-[16px] top-0 left-[7px] ${isOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
-                                                }`}
+                                            className={`absolute bg-[#65C142] rounded-[2px] transition-transform duration-300 w-[2px] h-[16px] top-0 left-[7px] ${
+                                                isOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
+                                            }`}
                                         />
                                     </span>
                                 </button>
