@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-// import Preloader from "./components/Preloader";
 import NeighborhoodButton from "./components/NeighborhoodButton";
 
 const inter = Inter({
@@ -17,13 +16,13 @@ export const metadata: Metadata = {
     default: "McCannical Roofing | Austin & Cedar Park, TX",
     template: "%s | McCannical Roofing",
   },
-  description: "Looking for McCannical Roofing (Macca Roofing) in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+  description: "Looking for McCannical Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
   alternates: {
     canonical: "./",
   },
   openGraph: {
     title: "McCannical Roofing | Austin & Cedar Park, TX",
-    description: "Looking for McCannical Roofing (Macca Roofing) in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    description: "Looking for McCannical Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     url: "https://www.mccannicalroofing.com/",
     siteName: "McCannical Roofing",
     images: [
@@ -40,17 +39,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "McCannical Roofing | Austin & Cedar Park, TX",
-    description: "Looking for McCannical Roofing (Macca Roofing) in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    description: "Looking for McCannical Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     images: ["/og-img.jpg"],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-[#101317] text-white">
         <Navbar />
         <main className="flex-grow">{children}</main>
