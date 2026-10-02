@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Quote, Camera, ShieldCheck, Award } from "lucide-react";
+import { ArrowRight, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,13 +38,15 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-[#F7F7F5]/85 backdrop-blur-[2px]" />
 
-            <div className="relative py-20 sm:py-28">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-32">
+            {/* এখানে py-24 sm:py-36 বা আরও বাড়িয়ে কন্টেন্টগুলো উপর থেকে নিচে নামানো হয়েছে */}
+            <div className="relative py-28 sm:py-36 lg:py-40">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28 sm:space-y-36">
                     {sections.map((s) => (
                         <div
                             key={s.title}
-                            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${s.reverse ? "lg:[&>*:first-child]:order-2" : ""
-                                }`}
+                            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
+                                s.reverse ? "lg:[&>*:first-child]:order-2" : ""
+                            }`}
                         >
                             {/* Blob Image */}
                             <motion.div
