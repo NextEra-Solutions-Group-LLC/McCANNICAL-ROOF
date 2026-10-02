@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mccannicalroofing.com"),
   title: {
-    default: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
+    default: "McCannical Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
     template: "%s | McCannical Roofing",
   },
   description: "Looking for Macca (McCannical) Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
