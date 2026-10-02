@@ -12,13 +12,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mccannicalroofing.com"),
-  title: "McCannical Roofing",
-  description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, painting, fencing, siding & windows",
+  metadataBase: new URL("https://www.mccannicalroofing.com"),
+  title: {
+    default: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
+    template: "%s | McCannical Roofing",
+  },
+  description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    title: "McCannical Roofing",
-    description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, painting, fencing, siding & windows",
-    url: "https://mccannicalroofing.com/",
+    title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
+    description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    url: "https://www.mccannicalroofing.com/",
     siteName: "McCannical Roofing",
     images: [
       {
@@ -33,20 +39,53 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Home - McCannical Roofing",
-    description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, painting, fencing, siding & windows",
+    title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
+    description: "Austin's premier roofing company. Full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     images: ["/og-img.jpg"],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // RoofingContractor Structured Data (JSON-LD) for Local SEO & AI Answer Engines
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "McCannical Roofing & Exteriors",
+    "url": "https://www.mccannicalroofing.com",
+    "telephone": "+1-512-000-0000", // আপনার সঠিক ফোন নম্বরটি এখানে দিন
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "postalCode": "78701",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Austin",
+      "Cedar Park",
+      "Round Rock",
+      "Georgetown",
+      "Leander"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/mccannicalroofing",
+      "https://www.instagram.com/mccannicalroofing",
+      "https://www.youtube.com/@mccannicalroofing"
+    ]
+  };
+
   return (
     <html
       lang="en"
       className={`${inter.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#101317] text-white">
-        
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
