@@ -1,247 +1,121 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, ShieldCheck, Quote, Camera, Award, Sparkles } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutPage() {
     return (
-        <section className="relative w-full bg-[#101317] overflow-hidden text-white font-['Segoe_UI',system-ui,-apple-system,sans-serif]">
-            {/* Ambient glow accents */}
-            <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
-            <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="min-h-screen bg-black text-white selection:bg-[#65C142] selection:text-black pt-32 sm:pt-36 lg:pt-40 pb-20 overflow-hidden">
+            {/* Background Ambient Glows */}
+            <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#65C142]/10 blur-[140px] pointer-events-none rounded-full" />
 
-            <div className="relative pt-32 pb-24 sm:pt-40 sm:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
-                {/* Hero Header */}
-                <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-28">
-                    <motion.div
+                {/* Hero Section */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+                    <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="lg:col-span-7 space-y-6"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#65C142]/15 border border-[#65C142]/40 text-[#65C142] text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md">
-                            <Sparkles size={14} /> About McCannical Roofing &amp; Exteriors
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                            <span className="w-2 h-2 rounded-full bg-[#65C142] animate-pulse" />
+                            <span className="text-xs font-semibold tracking-wider uppercase text-white/80">About Our Company</span>
                         </div>
+
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15]">
                             Raising the Standard in <br className="hidden sm:block" />
                             <span className="text-[#65C142]">Roofing &amp; Exteriors</span>
                         </h1>
-                        <p className="text-gray-300 text-base sm:text-lg mt-6 leading-relaxed">
-                            Built on local trust, drone technology, and Will McCann&apos;s mission to upgrade every property with an honest, transparent approach.
+
+                        <p className="text-white/70 text-lg leading-relaxed font-normal max-w-2xl">
+                            We bring uncompromising craftsmanship, premium materials, and elite reliability to every project. Whether it is storm restoration, total roof replacement, or exterior upgrades, our commitment to excellence stands above the rest.
                         </p>
+
+                        <div className="flex flex-wrap gap-4 pt-4">
+                            <Link 
+                                href="/contact" 
+                                className="px-8 py-4 rounded-xl bg-[#65C142] text-black font-bold tracking-wide hover:bg-[#57a738] transition-all duration-300 shadow-lg shadow-[#65C142]/20"
+                            >
+                                Get a Free Estimate
+                            </Link>
+                            <Link 
+                                href="/services" 
+                                className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold tracking-wide hover:bg-white/10 transition-all duration-300 backdrop-blur-md"
+                            >
+                                Our Services
+                            </Link>
+                        </div>
+                    </motion.div>
+
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="lg:col-span-5 relative"
+                    >
+                        <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-2 backdrop-blur-xl group">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60" />
+                            <div className="h-[380px] w-full relative rounded-xl overflow-hidden bg-neutral-900 flex items-center justify-center border border-white/5">
+                                <span className="text-white/40 font-medium text-sm">Roofing &amp; Exterior Showcase</span>
+                            </div>
+                            <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center justify-between">
+                                <div>
+                                    <p className="text-2xl font-black text-white">100%</p>
+                                    <p className="text-xs text-white/60 uppercase tracking-wider font-semibold">Satisfaction Guaranteed</p>
+                                </div>
+                                <div className="w-12 h-12 rounded-xl bg-[#65C142] text-black flex items-center justify-center font-bold text-xl shadow-lg">
+                                    ✓
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
 
-                {/* Main Content Grid */}
-                <div className="space-y-24 sm:space-y-32">
-                    
-                    {/* SECTION 1: Raising the Standard in Roofing & Exteriors */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="lg:col-span-6 space-y-6"
-                        >
-                            <div className="inline-flex items-center gap-2 text-[#65C142] font-extrabold text-xs sm:text-sm tracking-[0.25em] uppercase">
-                                <Award size={18} /> Our Core Mission
-                            </div>
-                            <h2 className="text-3xl sm:text-4xl font-black leading-tight text-white">
-                                Raising the Standard in <br />
-                                <span className="text-[#65C142]">Roofing &amp; Exteriors</span>
+                {/* Secondary Section / Mission */}
+                <div className="mt-24 border-t border-white/10 pt-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-3xl sm:text-4xl font-black leading-tight text-white mb-6">
+                                Built on Trust, Quality, <br />
+                                <span className="text-[#65C142]">and Durability</span>
                             </h2>
-                            <p className="text-gray-300 text-base leading-relaxed">
-                                At McCannical Roofing &amp; Exteriors, our mission is simple: raise the standard for how roofing and exterior work is done. As founder Will McCann puts it, <span className="italic text-white font-medium">&ldquo;It&rsquo;s always been my mission to upgrade every property and change how people see roofers. An honest referral means everything.&rdquo;</span> That mindset drives every decision we make.
+                            <p className="text-white/70 leading-relaxed mb-6">
+                                Our team consists of certified professionals dedicated to providing structural integrity and visual appeal. We understand that your property is a massive investment, which is why we treat every roof and exterior upgrade with absolute precision.
                             </p>
-                            <p className="text-gray-300 text-base leading-relaxed">
-                                Quality isn&rsquo;t a slogan here—it&rsquo;s the expectation. From the first inspection to the final walkthrough, we focus on doing the job right and standing behind our work with a <span className="text-[#65C142] font-bold">lifetime workmanship warranty</span>.
+                            <ul className="space-y-3 text-white/80 font-medium">
+                                <li className="flex items-center gap-3">
+                                    <span className="w-5 h-5 rounded-full bg-[#65C142]/20 text-[#65C142] flex items-center justify-center text-xs font-bold">✓</span>
+                                    Licensed and Insured Experts
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="w-5 h-5 rounded-full bg-[#65C142]/20 text-[#65C142] flex items-center justify-center text-xs font-bold">✓</span>
+                                    Top-Tier Warranties on Materials &amp; Labor
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="w-5 h-5 rounded-full bg-[#65C142]/20 text-[#65C142] flex items-center justify-center text-xs font-bold">✓</span>
+                                    Transparent Pricing with No Hidden Fees
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="bg-white/[0.02] border border-white/10 rounded-2xl p-8 backdrop-blur-xl relative">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#65C142]/10 blur-3xl pointer-events-none rounded-full" />
+                            <h3 className="text-xl font-bold text-white mb-4">Ready to Transform Your Property?</h3>
+                            <p className="text-white/60 text-sm mb-6 leading-relaxed">
+                                Contact our team today for a comprehensive inspection and consultation tailored specifically to your needs.
                             </p>
-
-                            {/* Founder Quote Card */}
-                            <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-[#65C142]/30 backdrop-blur-xl relative overflow-hidden mt-6">
-                                <Quote className="absolute top-3 right-3 text-[#65C142]/20 w-16 h-16 pointer-events-none" />
-                                <p className="text-gray-200 italic text-sm sm:text-base relative z-10 leading-relaxed">
-                                    &ldquo;It&rsquo;s always been my mission to upgrade every property and change how people see roofers. An honest referral means everything.&rdquo;
-                                </p>
-                                <div className="mt-4 flex items-center gap-3">
-                                    <div className="w-9 h-9 rounded-full bg-[#65C142] text-white flex items-center justify-center font-bold text-sm">
-                                        WM
-                                    </div>
-                                    <div>
-                                        <h4 className="text-white font-bold text-sm">Will McCann</h4>
-                                        <p className="text-[#65C142] text-xs font-semibold">Founder, McCannical Roofing &amp; Exteriors</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="lg:col-span-6 relative flex justify-center"
-                        >
-                            <div className="absolute w-80 h-80 bg-[#65C142]/20 rounded-full blur-3xl" />
-                            <div
-                                className="relative w-full max-w-md h-80 sm:h-96 overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.5)] border-4 border-white/10"
-                                style={{ borderRadius: "62% 38% 55% 45% / 45% 55% 45% 55%" }}
+                            <Link 
+                                href="/contact" 
+                                className="block w-full py-4 text-center rounded-xl bg-white text-black font-bold tracking-wide hover:bg-[#65C142] transition-all duration-300 shadow-md"
                             >
-                                <Image
-                                    src="https://i.ibb.co/xvGHSgF/Worker.jpg"
-                                    alt="McCannical Roofing Team Member"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-[#101317]/20" />
-                            </div>
-                        </motion.div>
+                                Schedule Inspection
+                            </Link>
+                        </div>
                     </div>
-
-                    {/* SECTION 2: Smart Tools, Honest Process, Local Trust */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:[&>*:first-child]:order-2">
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="lg:col-span-6 space-y-6"
-                        >
-                            <div className="inline-flex items-center gap-2 text-[#65C142] font-extrabold text-xs sm:text-sm tracking-[0.25em] uppercase">
-                                <Camera size={18} /> Modern Innovation
-                            </div>
-                            <h2 className="text-3xl sm:text-4xl font-black leading-tight text-white">
-                                Smart Tools, Honest Process, <br />
-                                <span className="text-[#65C142]">Local Trust</span>
-                            </h2>
-                            <p className="text-gray-300 text-base leading-relaxed">
-                                We believe better results come from smarter tools and straightforward communication. Our <span className="text-white font-semibold">drone inspections</span> allow us to assess roofs quickly and accurately, catching issues early and ensuring nothing is missed.
-                            </p>
-                            <p className="text-gray-300 text-base leading-relaxed">
-                                When insurance is involved, we handle the process from start to finish, delivering dependable solutions—and real peace of mind—for homeowners and businesses alike.
-                            </p>
-
-                            {/* Feature highlights */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-[#65C142]/15 text-[#65C142] flex-shrink-0">
-                                        <Camera size={20} />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-white font-bold text-sm">Drone Inspections</h4>
-                                        <p className="text-gray-400 text-xs mt-0.5">High-accuracy aerial scanning catching hidden damage early.</p>
-                                    </div>
-                                </div>
-
-                                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-[#65C142]/15 text-[#65C142] flex-shrink-0">
-                                        <ShieldCheck size={20} />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-white font-bold text-sm">Full Insurance Support</h4>
-                                        <p className="text-gray-400 text-xs mt-0.5">Start-to-finish claim guidance for maximum coverage.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="lg:col-span-6 relative flex justify-center"
-                        >
-                            <div className="absolute w-80 h-80 bg-[#65C142]/20 rounded-full blur-3xl" />
-                            <div
-                                className="relative w-full max-w-md h-80 sm:h-96 overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.5)] border-4 border-white/10"
-                                style={{ borderRadius: "55% 45% 62% 38% / 55% 45% 55% 45%" }}
-                            >
-                                <Image
-                                    src="https://i.ibb.co/5WcQ4CSq/image.png"
-                                    alt="Smart Drone Roof Assessment"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-[#101317]/20" />
-                            </div>
-                        </motion.div>
-                    </div>
-
-                    {/* SECTION 3: More Than Roofers — We're Austin Locals */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="lg:col-span-6 space-y-6"
-                        >
-                            <p className="text-[#65C142] font-extrabold text-xs sm:text-sm tracking-[0.25em] uppercase">
-                                Roofing Experts In Austin
-                            </p>
-                            <h2 className="text-3xl sm:text-4xl font-black leading-tight text-white">
-                                More Than Roofers— <br />
-                                <span className="text-[#65C142]">We&apos;re Austin Locals</span>
-                            </h2>
-                            <p className="text-gray-300 text-base leading-relaxed">
-                                We know the weather, the architecture, and what Austin homes and businesses truly need. That insider knowledge drives smarter solutions and better outcomes every time.
-                            </p>
-
-                            <div className="space-y-3 pt-2">
-                                <div className="flex items-center gap-3 text-sm text-gray-200">
-                                    <CheckCircle2 size={18} className="text-[#65C142] shrink-0" />
-                                    <span>Built for Central Texas storm weather &amp; heat resistance</span>
-                                </div>
-                                <div className="flex items-center gap-3 text-sm text-gray-200">
-                                    <CheckCircle2 size={18} className="text-[#65C142] shrink-0" />
-                                    <span>Fast response times across Austin, Round Rock &amp; surrounding areas</span>
-                                </div>
-                                <div className="flex items-center gap-3 text-sm text-gray-200">
-                                    <CheckCircle2 size={18} className="text-[#65C142] shrink-0" />
-                                    <span>Lifetime Workmanship Warranty on all major projects</span>
-                                </div>
-                            </div>
-
-                            <div className="pt-4">
-                                <Link
-                                    href="/contact"
-                                    className="relative group inline-flex items-center gap-2 bg-[#65C142] text-white font-semibold px-7 py-3.5 rounded-xl overflow-hidden transition-all duration-300 hover:bg-[#52a034] shadow-[0_10px_25px_rgba(101,193,66,0.3)]"
-                                >
-                                    <span className="relative">Schedule Free Inspection</span>
-                                    <ArrowRight size={17} className="relative transition-transform duration-300 group-hover:translate-x-1" />
-                                </Link>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="lg:col-span-6 relative flex justify-center"
-                        >
-                            <div className="absolute w-80 h-80 bg-[#65C142]/20 rounded-full blur-3xl" />
-                            <div
-                                className="relative w-full max-w-md h-80 sm:h-96 overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.5)] border-4 border-white/10"
-                                style={{ borderRadius: "45% 55% 38% 62% / 45% 55% 45% 55%" }}
-                            >
-                                <Image
-                                    src="https://i.ibb.co/60zVZpSn/image.png"
-                                    alt="Austin Local Roof Solutions"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-[#101317]/20" />
-                            </div>
-                        </motion.div>
-                    </div>
-
                 </div>
+
             </div>
-        </section>
+        </div>
     );
 }
