@@ -7,8 +7,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
     return (
-        /* pt-44 sm:pt-52 lg:pt-60 যোগ করে কন্টেন্টকে নেভবারের নিচে নামানো হয়েছে */
-        <section className="relative w-full bg-[#101317] overflow-hidden text-white font-['Segoe_UI',system-ui,-apple-system,sans-serif] pt-44 sm:pt-52 lg:pt-60">
+        <section className="relative w-full bg-[#101317] overflow-hidden text-white font-['Segoe_UI',system-ui,-apple-system,sans-serif] pt-50 sm:pt-55 lg:pt-65">
             {/* Ambient glow accents */}
             <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
