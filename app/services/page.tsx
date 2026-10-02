@@ -49,7 +49,8 @@ export default function Services() {
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
-            <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Top padding increased to pt-44 sm:pt-52 lg:pt-60 to clear fixed navbar */}
+            <div className="relative pt-44 sm:pt-52 lg:pt-60 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header row */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 sm:mb-20">
                     <motion.div
@@ -81,8 +82,8 @@ export default function Services() {
                     </motion.div>
                 </div>
 
-                {/* Connecting dotted line (desktop only) */}
-                <div className="hidden lg:block absolute left-0 right-0 top-[26rem] border-t-2 border-dashed border-[#65C142]/30 mx-24" />
+                {/* Connecting dotted line (desktop only) - adjusted top alignment */}
+                <div className="hidden lg:block absolute left-0 right-0 top-[31rem] border-t-2 border-dashed border-[#65C142]/30 mx-24" />
 
                 {/* Service cards with direct links to dedicated service pages */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
