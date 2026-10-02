@@ -14,16 +14,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mccannicalroofing.com"),
   title: {
-    default: "McCannical Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
+    default: "McCannical Roofing | Austin & Cedar Park, TX",
     template: "%s | McCannical Roofing",
   },
-  description: "Looking for Macca (McCannical) Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+  description: "Looking for McCannical Roofing (Macca Roofing) in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
   alternates: {
     canonical: "./",
   },
   openGraph: {
-    title: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
-    description: "Looking for Macca (McCannical) Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    title: "McCannical Roofing | Austin & Cedar Park, TX",
+    description: "Looking for McCannical Roofing (Macca Roofing) in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     url: "https://www.mccannicalroofing.com/",
     siteName: "McCannical Roofing",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "/og-img.jpg",
         width: 1200,
         height: 630,
-        alt: "Macca & McCannical Roofing & Exteriors",
+        alt: "McCannical Roofing & Exteriors",
       },
     ],
     locale: "en_US",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
-    description: "Looking for Macca (McCannical) Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    title: "McCannical Roofing | Austin & Cedar Park, TX",
+    description: "Looking for McCannical Roofing (Macca Roofing) in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     images: ["/og-img.jpg"],
   },
 };
