@@ -104,21 +104,14 @@ export default function Navbar() {
                     <Link href="/" className="flex items-center gap-4 group">
                         <div className={`relative flex items-center justify-center shrink-0 transition-all duration-500 group-hover:scale-105 ${scrolled ? "w-12 h-12 sm:w-14 sm:h-14" : "w-16 h-16 sm:w-20 sm:h-20"}`}>
                             <Image
-                                src="https://i.ibb.co/mVnWQGWh/image-removebg-preview-1.png"
+                                src="/company-logo.png"
                                 alt="McCannical Roofing & Exteriors"
                                 fill
                                 className="object-contain drop-shadow-[0_10px_18px_rgba(101,193,66,0.4)]"
                                 priority
                             />
                         </div>
-                        <div className="flex flex-col leading-none justify-center">
-                            <span className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-wider text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                                McCANNICAL
-                            </span>
-                            <span className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#65C142] font-extrabold mt-1.5 drop-shadow-sm">
-                                Roofing &amp; Exteriors
-                            </span>
-                        </div>
+                     
                     </Link>
 
                     {/* Desktop nav */}
