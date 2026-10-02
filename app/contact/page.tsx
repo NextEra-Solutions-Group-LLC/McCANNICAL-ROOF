@@ -64,7 +64,8 @@ export default function Contact() {
             <div className="absolute top-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
-            <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Content-ke navbar-er nishe namanor jonno pt-44 sm:pt-52 lg:pt-60 add kora hoyeche */}
+            <div className="relative pt-44 sm:pt-52 lg:pt-60 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
                     <motion.div
@@ -77,11 +78,11 @@ export default function Contact() {
                             <Sparkles size={14} /> Get In Touch
                         </div>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-                            Let's Discuss Your <br />
+                            Let&apos;s Discuss Your <br />
                             <span className="text-[#65C142]">Next Project</span>
                         </h2>
                         <p className="text-gray-400 text-sm sm:text-base mt-4 leading-relaxed">
-                            Ready to upgrade your property with Austin's trusted experts? Reach out for a free inspection or consultation.
+                            Ready to upgrade your property with Austin&apos;s trusted experts? Reach out for a free inspection or consultation.
                         </p>
                     </motion.div>
                 </div>
