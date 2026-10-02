@@ -13,7 +13,7 @@ export default function ProfessionalFencingPage() {
             <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
             {/* Top padding increased to pt-44 sm:pt-52 lg:pt-60 to clear fixed navbar */}
-            <div className="relative pt-44 sm:pt-52 lg:pt-60 pb-24 sm:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative pt-50 sm:pt-55 lg:pt-65 pb-24 sm:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Hero Header */}
                 <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-28">
