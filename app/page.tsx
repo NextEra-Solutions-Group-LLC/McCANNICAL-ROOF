@@ -9,10 +9,10 @@ import CtaNewsletter from "./components/Cta";
 import ServicesArea from "./service-area/page";
 import Services from "./components/Services";
 import Testimonials from "./components/Testomonials";
-import ProjectGallery from "./components/Gallery";
+
 import FloatingActions from "./components/Floating";
 
-// হোমপেজের জন্য সঠিক মেটাডাটা, ক্যাননিক্যাল ও og:url
+
 export const metadata: Metadata = {
   title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
   description: "Looking for trusted roofing contractors in Austin & Cedar Park, TX? McCannical Roofing offers expert roof replacement, repair, and storm damage solutions.",
@@ -71,9 +71,9 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      {/* <ServicesArea /> */}
+    
       <TrustedPartners />
-      <ProjectGallery />
+    
       <WhyChooseUs />
       <Process />
       <Faq />
