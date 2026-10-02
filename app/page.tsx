@@ -6,22 +6,21 @@ import TrustedPartners from "./components/Marque";
 import Process from "./components/Process";
 import Faq from "./components/Fqa";
 import CtaNewsletter from "./components/Cta";
-import ServicesArea from "./service-area/page";
 import Services from "./components/Services";
 import Testimonials from "./components/Testomonials";
 import FloatingActions from "./components/Floating";
 
 export const metadata: Metadata = {
-  title: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
-  description: "Looking for trusted Macca (McCannical) roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
+  title: "McCannical Roofing | Austin & Cedar Park, TX",
+  description: "Looking for trusted McCannical Roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
   alternates: {
     canonical: "https://www.mccannicalroofing.com",
   },
   openGraph: {
-    title: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
-    description: "Looking for trusted Macca (McCannical) roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
+    title: "McCannical Roofing | Austin & Cedar Park, TX",
+    description: "Looking for trusted McCannical Roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
     url: "https://www.mccannicalroofing.com",
-    siteName: "Macca & McCannical Roofing",
+    siteName: "McCannical Roofing",
     type: "website",
   },
 };
@@ -30,7 +29,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    "name": "McCannical Roofing & Exteriors (Macca Roofing)",
+    "name": "McCannical Roofing & Exteriors",
     "alternateName": "Macca Roofing",
     "url": "https://www.mccannicalroofing.com",
     "telephone": "+1-512-238-3000",
@@ -66,7 +65,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
       <Hero />
       <About />
       <Services />
