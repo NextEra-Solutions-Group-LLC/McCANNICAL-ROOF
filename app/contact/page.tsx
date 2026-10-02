@@ -65,7 +65,7 @@ export default function Contact() {
             <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
             {/* Content-ke navbar-er nishe namanor jonno pt-44 sm:pt-52 lg:pt-60 add kora hoyeche */}
-            <div className="relative pt-44 sm:pt-52 lg:pt-60 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative pt-50 sm:pt-55 lg:pt-65 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
                     <motion.div
