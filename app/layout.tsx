@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Preloader from "./components/Preloader";
+// import Preloader from "./components/Preloader";
 import NeighborhoodButton from "./components/NeighborhoodButton";
 
 const inter = Inter({
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#101317] text-white">
-        <Preloader />
+        
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
