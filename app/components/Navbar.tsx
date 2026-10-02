@@ -98,22 +98,23 @@ export default function Navbar() {
             </AnimatePresence>
 
             {/* Main navbar container */}
-            <div className={`relative transition-all duration-500 ease-in-out ${scrolled ? "py-3" : "py-5 sm:py-6"}`}>
+            <div className={`relative transition-all duration-500 ease-in-out ${scrolled ? "py-2" : "py-4 sm:py-5"}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center gap-4 group">
+                    
+                    {/* Extra Large Logo Container */}
+                    <Link href="/" className="flex items-center group">
                         <div
-                            className={`relative flex items-center justify-center shrink-0 rounded-xl transition-all duration-500 group-hover:scale-105 ${scrolled
-                                ? "w-16 h-16 sm:w-20 sm:h-20"
-                                : "w-24 h-24 sm:w-32 sm:h-32"
+                            className={`relative flex items-center justify-center shrink-0 transition-all duration-500 group-hover:scale-105 ${scrolled
+                                ? "w-28 h-28 sm:w-36 sm:h-36" 
+                                : "w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60"
                                 }`}
                         >
                             <Image
                                 src="/company-logo.png"
                                 alt="McCannical Roofing & Exteriors"
                                 fill
-                                sizes="(max-width: 640px) 96px, 128px"
-                                className="object-contain rounded-xl drop-shadow-[0_10px_18px_rgba(101,193,66,0.4)]"
+                                sizes="(max-width: 640px) 160px, (max-width: 768px) 208px, 240px"
+                                className="object-contain rounded-md drop-shadow-[0_12px_24px_rgba(101,193,66,0.45)]"
                                 priority
                             />
                         </div>
