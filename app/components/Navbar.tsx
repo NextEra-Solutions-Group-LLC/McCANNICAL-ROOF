@@ -107,12 +107,12 @@ export default function Navbar() {
                     >
                         <div
                             className={`relative shrink-0 rounded-lg transition-all duration-500 group-hover:scale-105 ${scrolled
-                                ? "w-12 h-12 sm:w-16 sm:h-16"
-                                : "w-14 h-14 sm:w-24 sm:h-24"
+                                ? "w-15 h-16 sm:w-16 sm:h-16"
+                                : "w-18 h-18 sm:w-24 sm:h-24"
                                 }`}
                         >
                             <Image
-                                src="https://i.ibb.co.com/c7srYz5/image.png"
+                                src="https://i.ibb.co.com/7NJHVYc5/image.png"
                                 alt="McCannical Roofing & Exteriors"
                                 fill
                                 sizes="(max-width: 640px) 56px, 96px"
@@ -122,7 +122,7 @@ export default function Navbar() {
                         </div>
 
                         {/* Brand text */}
-                        <div
+                        {/* <div
                             className="inline-flex flex-col items-stretch leading-none"
                             style={{ fontFamily: 'Optima, Candara, "Trebuchet MS", "Segoe UI", sans-serif' }}
                         >
@@ -145,7 +145,7 @@ export default function Navbar() {
                             >
                                 Roofing &amp; Exteriors
                             </span>
-                        </div>
+                        </div> */}
                     </Link>
 
                     {/* Desktop nav */}
