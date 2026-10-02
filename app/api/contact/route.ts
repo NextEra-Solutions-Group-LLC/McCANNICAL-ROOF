@@ -40,11 +40,11 @@ export async function POST(req: Request) {
   <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; padding: 40px 20px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #ffffff; border: 1px solid #000000; padding: 32px; border-radius: 8px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #ffffff; border: 1px solid #e2e8f0; padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
           <!-- Top Logo -->
           <tr>
-            <td align="center" style="padding-bottom: 24px; border-bottom: 1px solid #000000;">
-              <img src="https://mccannicalroofing.com/company-logo.png" alt="McCannical Roofing Logo" width="180" style="display: block; width: 180px; max-width: 100%; height: auto;" />
+            <td align="center" style="padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
+              <img src="https://i.postimg.cc/fySGP0wG/image.png" alt="McCannical Roofing Logo" width="180" style="display: block; width: 180px; max-width: 100%; height: auto;" />
             </td>
           </tr>
           
@@ -62,20 +62,20 @@ export async function POST(req: Request) {
             <td>
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; font-size: 15px; color: #000000;">
                 <tr>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; font-weight: 700; width: 150px; color: #000000;">Name:</td>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; color: #000000;">${name}</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; font-weight: 700; width: 150px; color: #000000;">Name:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #000000;">${name}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; font-weight: 700; color: #000000;">Email Address:</td>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; color: #000000;"><a href="mailto:${email}" style="color: #000000; text-decoration: underline;">${email}</a></td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; font-weight: 700; color: #000000;">Email Address:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #000000;"><a href="mailto:${email}" style="color: #000000; text-decoration: underline;">${email}</a></td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; font-weight: 700; color: #000000;">Phone Number:</td>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; color: #000000;"><a href="tel:${phone}" style="color: #000000; text-decoration: underline;">${phone}</a></td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; font-weight: 700; color: #000000;">Phone Number:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #000000;"><a href="tel:${phone}" style="color: #000000; text-decoration: underline;">${phone}</a></td>
                 </tr>
                 <tr>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; font-weight: 700; color: #000000;">Service Required:</td>
-                  <td style="padding: 12px 0; border-bottom: 1px solid #000000; color: #000000;">${serviceName}</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; font-weight: 700; color: #000000;">Service Required:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #000000;">${serviceName}</td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0; font-weight: 700; vertical-align: top; color: #000000;">Message:</td>
@@ -87,7 +87,7 @@ export async function POST(req: Request) {
           
           <!-- Footer -->
           <tr>
-            <td style="padding-top: 24px; font-size: 12px; color: #000000; border-top: 1px solid #000000; margin-top: 24px; text-align: center;">
+            <td style="padding-top: 24px; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0; margin-top: 24px; text-align: center;">
               This notification was sent automatically from mccannicalroofing.com
             </td>
           </tr>
