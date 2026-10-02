@@ -131,8 +131,8 @@ export default function AreasWeServe() {
             <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
-            {/* প্যাডিং বাড়িয়ে নেভবারের থেকে যথেষ্ট ফাকা জায়গা দেওয়া হয়েছে (pt-44 sm:pt-52 lg:pt-56) */}
-            <div className="relative pt-44 sm:pt-52 lg:pt-56 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+            <div className="relative pt-50 sm:pt-55 lg:pt-60 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header Section */}
                 <div className="max-w-3xl text-center mx-auto mb-12 sm:mb-16">
