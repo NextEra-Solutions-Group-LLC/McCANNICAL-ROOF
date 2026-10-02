@@ -32,34 +32,25 @@ export default function Footer() {
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 pb-10 pt-14 sm:px-10 lg:px-14">
                 <div className="flex flex-col justify-between gap-12 lg:flex-row lg:gap-6">
-                    {/* Brand / Logo container styled as a rounded white badge like the image */}
+                    {/* Brand / Logo container - Background badge removed & enlarged logo */}
                     <div className="max-w-md">
                         <Link
                             href="/"
-                            className="group inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-2.5 shadow-md transition-transform duration-300 hover:scale-[1.02]"
+                            className="group inline-block transition-transform duration-300 hover:scale-[1.03]"
                         >
-                            <div className="relative h-12 w-12 flex-shrink-0 sm:h-14 sm:w-14">
+                            <div className="relative h-20 w-56 sm:h-24 sm:w-72 lg:h-28 lg:w-80 shrink-0">
                                 <Image
-                                    src="https://i.ibb.co.com/c7srYz5/image.png"
-                                    alt="McCannical Roofing Logo"
+                                    src="https://i.ibb.co.com/7NJHVYc5/image.png"
+                                    alt="McCannical Roofing & Exteriors Logo"
                                     fill
-                                    sizes="(max-width: 640px) 48px, 56px"
-                                    className="object-contain"
+                                    sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
+                                    className="object-contain object-left"
                                     priority
                                 />
                             </div>
-
-                            <div>
-                                <h2 className="text-lg font-bold leading-tight tracking-wider text-black sm:text-xl">
-                                    McCANNICAL
-                                </h2>
-                                <p className="text-[9px] font-bold tracking-widest text-[#7cb83a] sm:text-[11px]">
-                                    ROOFING &amp; EXTERIORS
-                                </p>
-                            </div>
                         </Link>
 
-                        <p className="mt-5 text-[15px] leading-relaxed text-white/85">
+                        <p className="mt-4 text-[15px] leading-relaxed text-white/85">
                             At McCannical Roofing &amp; Exteriors,{" "}
                             <span className="font-semibold text-white">Quality Over Everything</span> isn&apos;t
                             just our slogan, it drives everything we do!
