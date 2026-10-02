@@ -30,27 +30,29 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
     "name": "McCannical Roofing & Exteriors",
-    "alternateName": "Macca Roofing",
     "url": "https://www.mccannicalroofing.com",
     "telephone": "+1-512-238-3000",
+    "email": "Info@McCannicalRoofing.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "13785 Research Blvd Suite 125",
       "addressLocality": "Austin",
       "addressRegion": "TX",
+      "postalCode": "78750",
       "addressCountry": "US"
     },
+    "openingHours": ["Mo-Fr 07:00-19:00", "Sa 07:00-14:00"],
     "areaServed": [
       "Austin",
-      "Barton Creek",
-      "Brushy Creek",
       "Cedar Park",
-      "Georgetown",
-      "Lago Vista",
-      "Lakeway",
-      "Leander",
-      "Liberty Hill",
       "Round Rock",
-      "Serenada"
+      "Georgetown",
+      "Leander",
+      "Pflugerville",
+      "Lakeway",
+      "Liberty Hill",
+      "Lago Vista",
+      "Brushy Creek"
     ],
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61564928592190",
