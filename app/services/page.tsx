@@ -50,7 +50,7 @@ export default function Services() {
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
             {/* Top padding increased to pt-44 sm:pt-52 lg:pt-60 to clear fixed navbar */}
-            <div className="relative pt-44 sm:pt-52 lg:pt-60 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative pt-50 sm:pt-55 lg:pt-65 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header row */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 sm:mb-20">
                     <motion.div
