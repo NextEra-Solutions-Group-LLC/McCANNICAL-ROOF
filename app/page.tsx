@@ -9,21 +9,19 @@ import CtaNewsletter from "./components/Cta";
 import ServicesArea from "./service-area/page";
 import Services from "./components/Services";
 import Testimonials from "./components/Testomonials";
-
 import FloatingActions from "./components/Floating";
 
-
 export const metadata: Metadata = {
-  title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
-  description: "Looking for trusted roofing contractors in Austin & Cedar Park, TX? McCannical Roofing offers expert roof replacement, repair, and storm damage solutions.",
+  title: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
+  description: "Looking for trusted Macca (McCannical) roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
   alternates: {
     canonical: "https://www.mccannicalroofing.com",
   },
   openGraph: {
-    title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
-    description: "Looking for trusted roofing contractors in Austin & Cedar Park, TX? McCannical Roofing offers expert roof replacement, repair, and storm damage solutions.",
+    title: "Macca Roofing | McCannical Roofing Company in Austin & Cedar Park, TX",
+    description: "Looking for trusted Macca (McCannical) roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
     url: "https://www.mccannicalroofing.com",
-    siteName: "McCannical Roofing",
+    siteName: "Macca & McCannical Roofing",
     type: "website",
   },
 };
@@ -32,7 +30,8 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    "name": "McCannical Roofing",
+    "name": "McCannical Roofing & Exteriors (Macca Roofing)",
+    "alternateName": "Macca Roofing",
     "url": "https://www.mccannicalroofing.com",
     "telephone": "+1-512-238-3000",
     "address": {
@@ -71,9 +70,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-    
       <TrustedPartners />
-    
       <WhyChooseUs />
       <Process />
       <Faq />
