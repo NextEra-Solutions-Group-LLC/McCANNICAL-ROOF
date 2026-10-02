@@ -98,54 +98,28 @@ export default function Navbar() {
             </AnimatePresence>
 
             {/* Main navbar container */}
-            <div className={`relative transition-all duration-500 ease-in-out ${scrolled ? "py-3" : "py-5 sm:py-6"}`}>
+            <div className={`relative transition-all duration-500 ease-in-out ${scrolled ? "py-2" : "py-3 sm:py-4"}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
-                    {/* Logo + Brand (white card so black text is always visible) */}
+                    {/* Transparent Logo with dynamic larger sizing */}
                     <Link
                         href="/"
-                        className="flex items-center gap-2 sm:gap-4 group bg-white rounded-xl px-2.5 py-1.5 sm:px-4 sm:py-2 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(101,193,66,0.45)]"
+                        className="flex items-center group transition-transform duration-300 hover:scale-105"
                     >
                         <div
-                            className={`relative shrink-0 rounded-lg transition-all duration-500 group-hover:scale-105 ${scrolled
-                                ? "w-15 h-16 sm:w-16 sm:h-16"
-                                : "w-18 h-18 sm:w-24 sm:h-24"
+                            className={`relative shrink-0 transition-all duration-500 ${scrolled
+                                ? "w-36 h-14 sm:w-44 sm:h-16 lg:w-52 lg:h-18"
+                                : "w-44 h-16 sm:w-56 sm:h-22 lg:w-72 lg:h-28"
                                 }`}
                         >
                             <Image
                                 src="https://i.ibb.co.com/7NJHVYc5/image.png"
                                 alt="McCannical Roofing & Exteriors"
                                 fill
-                                sizes="(max-width: 640px) 56px, 96px"
-                                className="object-contain rounded-lg"
+                                sizes="(max-width: 640px) 180px, (max-width: 1024px) 240px, 300px"
+                                className="object-contain"
                                 priority
                             />
                         </div>
-
-                        {/* Brand text */}
-                        {/* <div
-                            className="inline-flex flex-col items-stretch leading-none"
-                            style={{ fontFamily: 'Optima, Candara, "Trebuchet MS", "Segoe UI", sans-serif' }}
-                        >
-                            <span
-                                className={`inline-flex items-baseline justify-between font-medium text-black uppercase tracking-[0.06em] transition-all duration-500 ${scrolled
-                                    ? "text-lg sm:text-2xl lg:text-3xl"
-                                    : "text-xl sm:text-3xl lg:text-[2.4rem]"
-                                    }`}
-                            >
-                                <span>M</span>
-                                <span className="text-[0.78em]">c</span>
-                                <span>C</span>
-                                <span className="text-[0.78em]">ANNICAL</span>
-                            </span>
-                            <span
-                                className={`mt-1 sm:mt-1.5 block font-extrabold uppercase text-[#4c9530] tracking-[0.04em] [text-align-last:justify] whitespace-nowrap transition-all duration-500 ${scrolled
-                                    ? "text-[8px] sm:text-xs lg:text-sm"
-                                    : "text-[9px] sm:text-sm lg:text-base"
-                                    }`}
-                            >
-                                Roofing &amp; Exteriors
-                            </span>
-                        </div> */}
                     </Link>
 
                     {/* Desktop nav */}
