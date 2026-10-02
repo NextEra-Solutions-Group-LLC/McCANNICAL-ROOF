@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Hero from "./components/Hero";
 import About from "./components/About";
 import WhyChooseUs from "./components/WhyChose";
@@ -11,12 +12,28 @@ import Testimonials from "./components/Testomonials";
 import ProjectGallery from "./components/Gallery";
 import FloatingActions from "./components/Floating";
 
+// হোমপেজের জন্য সঠিক মেটাডাটা, ক্যাননিক্যাল ও og:url
+export const metadata: Metadata = {
+  title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
+  description: "Looking for trusted roofing contractors in Austin & Cedar Park, TX? McCannical Roofing offers expert roof replacement, repair, and storm damage solutions.",
+  alternates: {
+    canonical: "https://www.mccannicalroofing.com",
+  },
+  openGraph: {
+    title: "Roofing Company in Austin & Cedar Park, TX | McCannical Roofing",
+    description: "Looking for trusted roofing contractors in Austin & Cedar Park, TX? McCannical Roofing offers expert roof replacement, repair, and storm damage solutions.",
+    url: "https://www.mccannicalroofing.com",
+    siteName: "McCannical Roofing",
+    type: "website",
+  },
+};
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
     "name": "McCannical Roofing",
-    "url": "https://mccannicalroofing.com",
+    "url": "https://www.mccannicalroofing.com",
     "telephone": "+1-512-238-3000",
     "address": {
       "@type": "PostalAddress",
