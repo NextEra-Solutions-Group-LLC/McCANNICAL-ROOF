@@ -102,16 +102,21 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-4 group">
-                        <div className={`relative flex items-center justify-center shrink-0 transition-all duration-500 group-hover:scale-105 ${scrolled ? "w-12 h-12 sm:w-14 sm:h-14" : "w-16 h-16 sm:w-20 sm:h-20"}`}>
+                        <div
+                            className={`relative flex items-center justify-center shrink-0 rounded-xl transition-all duration-500 group-hover:scale-105 ${scrolled
+                                ? "w-16 h-16 sm:w-20 sm:h-20"
+                                : "w-24 h-24 sm:w-32 sm:h-32"
+                                }`}
+                        >
                             <Image
                                 src="/company-logo.png"
                                 alt="McCannical Roofing & Exteriors"
                                 fill
-                                className="object-contain drop-shadow-[0_10px_18px_rgba(101,193,66,0.4)]"
+                                sizes="(max-width: 640px) 96px, 128px"
+                                className="object-contain rounded-xl drop-shadow-[0_10px_18px_rgba(101,193,66,0.4)]"
                                 priority
                             />
                         </div>
-                     
                     </Link>
 
                     {/* Desktop nav */}
