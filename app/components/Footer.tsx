@@ -32,27 +32,34 @@ export default function Footer() {
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 pb-10 pt-14 sm:px-10 lg:px-14">
                 <div className="flex flex-col justify-between gap-12 lg:flex-row lg:gap-6">
-                    {/* Brand / Logo with Name side-by-side */}
+                    {/* Brand / Logo container styled as a rounded white badge like the image */}
                     <div className="max-w-md">
-                        <div className="flex items-center gap-3">
-
-                            <div className="relative h-12 w-12 flex-shrink-0">
+                        <Link
+                            href="/"
+                            className="group inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-2.5 shadow-md transition-transform duration-300 hover:scale-[1.02]"
+                        >
+                            <div className="relative h-12 w-12 flex-shrink-0 sm:h-14 sm:w-14">
                                 <Image
-                                    src="https://i.ibb.co/mVnWQGWh/image-removebg-preview-1.png"
+                                    src="https://i.ibb.co.com/c7srYz5/image.png"
                                     alt="McCannical Roofing Logo"
                                     fill
-                                    className="object-contain object-left"
+                                    sizes="(max-width: 640px) 48px, 56px"
+                                    className="object-contain"
                                     priority
                                 />
                             </div>
 
                             <div>
-                                <h2 className="text-xl font-bold tracking-wider text-white">McCANNICAL</h2>
-                                <p className="text-[10px] font-semibold tracking-widest text-[#7cb83a]">ROOFING &amp; EXTERIORS</p>
+                                <h2 className="text-lg font-bold leading-tight tracking-wider text-black sm:text-xl">
+                                    McCANNICAL
+                                </h2>
+                                <p className="text-[9px] font-bold tracking-widest text-[#7cb83a] sm:text-[11px]">
+                                    ROOFING &amp; EXTERIORS
+                                </p>
                             </div>
-                        </div>
+                        </Link>
 
-                        <p className="mt-4 text-[15px] leading-relaxed text-white/85">
+                        <p className="mt-5 text-[15px] leading-relaxed text-white/85">
                             At McCannical Roofing &amp; Exteriors,{" "}
                             <span className="font-semibold text-white">Quality Over Everything</span> isn&apos;t
                             just our slogan, it drives everything we do!
@@ -136,7 +143,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Scroll to top button (Moved to left-6) */}
+            {/* Scroll to top button */}
             <button
                 onClick={scrollToTop}
                 aria-label="Scroll to top"
