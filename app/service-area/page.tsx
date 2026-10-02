@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, ArrowUpRight, Sparkles, CheckCircle2, Phone, Search } from "lucide-react";
+import { MapPin, ArrowUpRight, Sparkles, Phone, Search, X } from "lucide-react";
 import Link from "next/link";
 
 interface AreaItem {
@@ -111,23 +111,31 @@ export default function AreasWeServe() {
     const [selectedCity, setSelectedCity] = useState<string | null>("Austin");
     const [searchTerm, setSearchTerm] = useState("");
 
-    const activeArea = areas.find((a) => a.city === selectedCity) || areas[0];
+    const filteredAreas = useMemo(() => {
+        return areas.filter(
+            (a) =>
+                a.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                a.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                (a.zipCodes && a.zipCodes.includes(searchTerm))
+        );
+    }, [searchTerm]);
 
-    const filteredAreas = areas.filter((a) =>
-        a.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        a.state.toLowerCase().includes(searchTerm.toLowerCase())
+    const activeArea = useMemo(
+        () => areas.find((a) => a.city === selectedCity) || null,
+        [selectedCity]
     );
 
     return (
-        <section className="relative w-full bg-[#101317] text-white overflow-hidden font-['Segoe_UI',system-ui,-apple-system,sans-serif]">
+        <section className="relative w-full bg-[#101317] text-white overflow-hidden font-sans">
             {/* Ambient Background Glows */}
             <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#65C142]/10 rounded-full blur-[140px] pointer-events-none" />
 
-            <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+            {/* প্যাডিং বাড়িয়ে নেভবারের থেকে যথেষ্ট ফাকা জায়গা দেওয়া হয়েছে (pt-44 sm:pt-52 lg:pt-56) */}
+            <div className="relative pt-44 sm:pt-52 lg:pt-56 pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
                 {/* Header Section */}
-                <div className="max-w-3xl text-center mx-auto mb-16 sm:mb-20">
+                <div className="max-w-3xl text-center mx-auto mb-12 sm:mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +146,6 @@ export default function AreasWeServe() {
                             <Sparkles size={14} /> Where We Work
                         </div>
 
-                        {/* Title matching requested image design */}
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
                             Proudly{" "}
                             <span className="relative inline-block text-[#65C142]">
@@ -161,7 +168,6 @@ export default function AreasWeServe() {
                             Central Texas Communities
                         </h1>
 
-                        {/* Requested text paragraph */}
                         <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
                             At McCannical Roofing &amp; Exteriors, we bring expert roofing and exterior services to homeowners and businesses across the Greater Austin area. Whether you need a repair, replacement, or full exterior upgrade, our local team is here to help.
                         </p>
@@ -172,11 +178,10 @@ export default function AreasWeServe() {
                 <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar scroll-smooth">
                     <button
                         onClick={() => setSelectedCity(null)}
-                        className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all border ${
-                            selectedCity === null
-                                ? "bg-[#65C142] text-white border-[#65C142] shadow-[0_0_15px_rgba(101,193,66,0.3)]"
-                                : "bg-white/[0.04] text-gray-300 border-white/10 hover:border-white/30"
-                        }`}
+                        className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all border ${selectedCity === null
+                            ? "bg-[#65C142] text-white border-[#65C142] shadow-[0_0_15px_rgba(101,193,66,0.3)]"
+                            : "bg-white/[0.04] text-gray-300 border-white/10 hover:border-white/30"
+                            }`}
                     >
                         All Cities ({areas.length})
                     </button>
@@ -184,11 +189,10 @@ export default function AreasWeServe() {
                         <button
                             key={a.city}
                             onClick={() => setSelectedCity(a.city)}
-                            className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all border ${
-                                selectedCity === a.city
-                                    ? "bg-[#65C142] text-white border-[#65C142] shadow-[0_0_15px_rgba(101,193,66,0.3)]"
-                                    : "bg-white/[0.04] text-gray-300 border-white/10 hover:border-white/30"
-                            }`}
+                            className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all border ${selectedCity === a.city
+                                ? "bg-[#65C142] text-white border-[#65C142] shadow-[0_0_15px_rgba(101,193,66,0.3)]"
+                                : "bg-white/[0.04] text-gray-300 border-white/10 hover:border-white/30"
+                                }`}
                         >
                             {a.city}
                         </button>
@@ -197,8 +201,6 @@ export default function AreasWeServe() {
 
                 {/* Interactive Service Area Map Container */}
                 <div className="relative w-full rounded-3xl bg-[#12161d] border border-white/15 overflow-hidden p-6 sm:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.6)]">
-                    
-                    {/* Background Graphic Texture */}
                     <div
                         className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none"
                         style={{
@@ -207,7 +209,6 @@ export default function AreasWeServe() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#101317]/90 via-[#101317]/80 to-[#101317]/95 backdrop-blur-[2px] pointer-events-none" />
 
-                    {/* Header bar inside map container */}
                     <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10 mb-6">
                         <div>
                             <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
@@ -219,57 +220,56 @@ export default function AreasWeServe() {
                             </p>
                         </div>
 
-                        {/* Search input inside map */}
                         <div className="relative w-full md:w-72">
                             <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
                             <input
                                 type="text"
-                                placeholder="Search city..."
+                                placeholder="Search city or zip code..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full bg-black/40 border border-white/15 rounded-xl pl-10 pr-4 py-2 text-xs sm:text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#65C142] transition-colors"
+                                className="w-full bg-black/40 border border-white/15 rounded-xl pl-10 pr-9 py-2 text-xs sm:text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#65C142] transition-colors"
                             />
+                            {searchTerm && (
+                                <button
+                                    onClick={() => setSearchTerm("")}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
+                                >
+                                    <X size={14} />
+                                </button>
+                            )}
                         </div>
                     </div>
 
-                    {/* Interactive Map Visual Area */}
                     <div className="relative w-full h-[400px] sm:h-[480px] rounded-2xl bg-[#0c0e12]/80 border border-white/10 overflow-hidden flex items-center justify-center">
-                        
-                        {/* Subtle Grid Overlay */}
                         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#65C142_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-                        
-                        {/* Center Texas Badge Watermark */}
+
                         <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
                             <span className="text-9xl font-black uppercase tracking-widest text-white">TEXAS</span>
                         </div>
 
-                        {/* Classy Map Pins (No Annoying Pulse Flashing!) */}
-                        {areas.map((area) => {
+                        {filteredAreas.map((area) => {
                             const isSelected = selectedCity === area.city;
                             return (
                                 <button
                                     key={area.city}
                                     onClick={() => setSelectedCity(area.city)}
                                     style={{ top: area.top, left: area.left }}
-                                    className={`absolute group -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 z-20 transition-all duration-300 ${
-                                        isSelected ? "scale-110 z-30" : "hover:scale-105"
-                                    }`}
+                                    className={`absolute group -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 z-20 transition-all duration-300 ${isSelected ? "scale-110 z-30" : "hover:scale-105"
+                                        }`}
                                 >
                                     <div
-                                        className={`relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full transition-all ${
-                                            isSelected
-                                                ? "bg-[#65C142] text-white shadow-[0_0_20px_rgba(101,193,66,0.8)] border-2 border-white"
-                                                : "bg-[#1c222b] text-[#65C142] border border-[#65C142]/50 hover:bg-[#65C142] hover:text-white"
-                                        }`}
+                                        className={`relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full transition-all ${isSelected
+                                            ? "bg-[#65C142] text-white shadow-[0_0_20px_rgba(101,193,66,0.8)] border-2 border-white"
+                                            : "bg-[#1c222b] text-[#65C142] border border-[#65C142]/50 hover:bg-[#65C142] hover:text-white"
+                                            }`}
                                     >
                                         <MapPin size={18} />
                                     </div>
                                     <span
-                                        className={`text-xs font-bold px-2.5 py-1 rounded-md transition-all backdrop-blur-md hidden sm:inline-block ${
-                                            isSelected
-                                                ? "bg-[#65C142] text-white shadow-md"
-                                                : "bg-black/70 text-gray-200 border border-white/10 group-hover:border-[#65C142]"
-                                        }`}
+                                        className={`text-xs font-bold px-2.5 py-1 rounded-md transition-all backdrop-blur-md hidden sm:inline-block ${isSelected
+                                            ? "bg-[#65C142] text-white shadow-md"
+                                            : "bg-black/70 text-gray-200 border border-white/10 group-hover:border-[#65C142]"
+                                            }`}
                                     >
                                         {area.city}
                                     </span>
@@ -277,7 +277,6 @@ export default function AreasWeServe() {
                             );
                         })}
 
-                        {/* Floating Details Drawer Card for Selected City */}
                         <AnimatePresence mode="wait">
                             {activeArea && (
                                 <motion.div
@@ -285,13 +284,15 @@ export default function AreasWeServe() {
                                     initial={{ opacity: 0, y: 15 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 15 }}
-                                    transition={{ duration: 0.3 }}
+                                    transition={{ duration: 0.25 }}
                                     className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-96 bg-[#161b22]/95 border border-[#65C142]/40 backdrop-blur-2xl p-5 rounded-2xl shadow-2xl z-30"
                                 >
                                     <div className="flex items-start justify-between">
                                         <div>
                                             <div className="flex items-center gap-2">
-                                                <h4 className="text-lg font-bold text-white">{activeArea.city}, {activeArea.state}</h4>
+                                                <h4 className="text-lg font-bold text-white">
+                                                    {activeArea.city}, {activeArea.state}
+                                                </h4>
                                                 {activeArea.tag && (
                                                     <span className="px-2 py-0.5 rounded-full bg-[#65C142]/20 text-[#65C142] text-[10px] font-extrabold uppercase tracking-wider">
                                                         {activeArea.tag}
@@ -302,14 +303,23 @@ export default function AreasWeServe() {
                                                 Active Coverage Area
                                             </p>
                                         </div>
-                                        <div className="w-8 h-8 rounded-full bg-[#65C142]/15 text-[#65C142] flex items-center justify-center">
-                                            <CheckCircle2 size={18} />
-                                        </div>
+                                        <button
+                                            onClick={() => setSelectedCity(null)}
+                                            className="w-7 h-7 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white flex items-center justify-center transition-colors"
+                                        >
+                                            <X size={14} />
+                                        </button>
                                     </div>
 
                                     <p className="text-gray-300 text-xs sm:text-sm mt-3 leading-relaxed">
                                         {activeArea.desc}
                                     </p>
+
+                                    {activeArea.zipCodes && (
+                                        <p className="text-[11px] text-gray-400 mt-2">
+                                            <span className="text-gray-300 font-semibold">Zip Codes:</span> {activeArea.zipCodes}
+                                        </p>
+                                    )}
 
                                     <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
                                         <Link
@@ -318,7 +328,10 @@ export default function AreasWeServe() {
                                         >
                                             Book Inspection in {activeArea.city} <ArrowUpRight size={14} />
                                         </Link>
-                                        <a href="tel:5122383000" className="text-xs text-gray-400 hover:text-white flex items-center gap-1">
+                                        <a
+                                            href="tel:5122383000"
+                                            className="text-xs text-gray-400 hover:text-white flex items-center gap-1"
+                                        >
                                             <Phone size={12} /> (512) 238-3000
                                         </a>
                                     </div>
@@ -333,7 +346,9 @@ export default function AreasWeServe() {
                     <div className="flex items-center justify-between mb-8">
                         <div>
                             <h3 className="text-2xl font-bold text-white">Central Texas Locations</h3>
-                            <p className="text-xs sm:text-sm text-gray-400 mt-1">Explore all communities served by McCannical Roofing &amp; Exteriors.</p>
+                            <p className="text-xs sm:text-sm text-gray-400 mt-1">
+                                Explore all communities served by McCannical Roofing &amp; Exteriors.
+                            </p>
                         </div>
                     </div>
 
@@ -342,11 +357,10 @@ export default function AreasWeServe() {
                             <div
                                 key={area.city}
                                 onClick={() => setSelectedCity(area.city)}
-                                className={`group cursor-pointer relative flex flex-col justify-between overflow-hidden rounded-2xl border p-6 transition-all duration-300 ${
-                                    selectedCity === area.city
-                                        ? "bg-white/[0.07] border-[#65C142] shadow-[0_10px_30px_rgba(101,193,66,0.2)]"
-                                        : "bg-white/[0.03] border-white/10 hover:border-[#65C142]/50 hover:bg-white/[0.06]"
-                                }`}
+                                className={`group cursor-pointer relative flex flex-col justify-between overflow-hidden rounded-2xl border p-6 transition-all duration-300 ${selectedCity === area.city
+                                    ? "bg-white/[0.07] border-[#65C142] shadow-[0_10px_30px_rgba(101,193,66,0.2)]"
+                                    : "bg-white/[0.03] border-white/10 hover:border-[#65C142]/50 hover:bg-white/[0.06]"
+                                    }`}
                             >
                                 <div>
                                     <div className="mb-4 flex items-start justify-between">
@@ -378,7 +392,6 @@ export default function AreasWeServe() {
                             </div>
                         ))}
 
-                        {/* CTA Card */}
                         <div className="flex flex-col justify-between rounded-2xl border border-dashed border-[#65C142]/50 bg-[#65C142]/[0.08] p-6 transition-all duration-300 hover:border-[#65C142] hover:bg-[#65C142]/15">
                             <div>
                                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#65C142] text-white shadow-md">
@@ -401,7 +414,6 @@ export default function AreasWeServe() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     );
