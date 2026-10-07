@@ -13,16 +13,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mccannicalroofing.com"),
   title: {
-    default: "McCannical Roofing | Austin & Cedar Park, TX",
+    default: "McCannical Roofing | Austin & Central Texas",
     template: "%s | McCannical Roofing",
   },
-  description: "Looking for McCannical Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+  description: "Looking for McCannical Roofing in Austin & Central Texas? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
   alternates: {
     canonical: "./",
   },
   openGraph: {
-    title: "McCannical Roofing | Austin & Cedar Park, TX",
-    description: "Looking for McCannical Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    title: "McCannical Roofing | Austin & Central Texas",
+    description: "Looking for McCannical Roofing in Austin & Central Texas? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     url: "https://www.mccannicalroofing.com/",
     siteName: "McCannical Roofing",
     images: [
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "McCannical Roofing | Austin & Cedar Park, TX",
-    description: "Looking for McCannical Roofing in Austin & Cedar Park? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
+    title: "McCannical Roofing | Austin & Central Texas",
+    description: "Looking for McCannical Roofing in Austin & Central Texas? We are your premier full-service contractor for roofing, gutters, storm damage repair, and replacements.",
     images: ["/og-img.jpg"],
   },
 };

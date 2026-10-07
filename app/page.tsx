@@ -11,14 +11,14 @@ import Testimonials from "./components/Testomonials";
 import FloatingActions from "./components/Floating";
 
 export const metadata: Metadata = {
-  title: "McCannical Roofing | Austin & Cedar Park, TX",
-  description: "Looking for trusted McCannical Roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
+  title: "McCannical Roofing | Austin & Central Texas",
+  description: "Looking for trusted McCannical Roofing contractors in Austin & Central Texas? We offer expert roof replacement, repair, and storm damage solutions.",
   alternates: {
     canonical: "https://www.mccannicalroofing.com",
   },
   openGraph: {
-    title: "McCannical Roofing | Austin & Cedar Park, TX",
-    description: "Looking for trusted McCannical Roofing contractors in Austin & Cedar Park, TX? We offer expert roof replacement, repair, and storm damage solutions.",
+    title: "McCannical Roofing | Austin & Central Texas",
+    description: "Looking for trusted McCannical Roofing contractors in Austin & Central Texas? We offer expert roof replacement, repair, and storm damage solutions.",
     url: "https://www.mccannicalroofing.com",
     siteName: "McCannical Roofing",
     type: "website",
