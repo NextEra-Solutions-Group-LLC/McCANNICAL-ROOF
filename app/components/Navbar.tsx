@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MapPin, Home, Info, Wrench, Map, Mail, Phone, ChevronDown, Building2, Layers, Shield } from "lucide-react";
+import { X, MapPin, Home, Info, Wrench, Map, Mail, Phone, ChevronDown, Building2, Layers, Shield, BookOpen } from "lucide-react";
 
 const serviceSubLinks = [
     {
@@ -38,6 +38,7 @@ const navLinks = [
     { label: "About", href: "/about", icon: Info },
     { label: "Services", href: "/services", icon: Wrench, hasDropdown: true },
     { label: "Service Area", href: "/service-area", icon: Map },
+    { label: "Blog", href: "/blog", icon: BookOpen },
     { label: "Contact", href: "/contact", icon: Mail },
 ];
 

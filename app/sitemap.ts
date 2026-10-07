@@ -1,7 +1,15 @@
 import { MetadataRoute } from 'next';
+import blogPosts from './data/blog.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mccannicalroofing.com';
+
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/${post.slug}`,
+    lastModified: new Date(post.date || Date.now()),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -38,8 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.8,
     },
- 
+    ...blogEntries,
   ];
 }

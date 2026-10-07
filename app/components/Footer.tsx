@@ -19,6 +19,13 @@ export default function Footer() {
         { name: "Professional Fencing", href: "/services/professional-fencing" },
     ];
 
+    const quickLinks = [
+        { name: "About Us", href: "/about" },
+        { name: "Roofing Blog", href: "/blog" },
+        { name: "Service Areas", href: "/service-area" },
+        { name: "Contact & Free Estimate", href: "/contact" },
+    ];
+
     return (
         <footer className="relative overflow-hidden bg-[#161616] text-white">
             {/* Background Image with Overlay */}
@@ -57,21 +64,41 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Services */}
-                    <div className="lg:pt-1">
-                        <h3 className="mb-5 text-xl font-bold">Services</h3>
-                        <ul className="space-y-3.5">
-                            {services.map((service) => (
-                                <li key={service.name}>
-                                    <Link
-                                        href={service.href}
-                                        className="text-[15px] text-white/80 transition-colors hover:text-[#7cb83a]"
-                                    >
-                                        {service.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                    {/* Links columns */}
+                    <div className="grid grid-cols-2 gap-10 sm:gap-16 lg:gap-20">
+                        {/* Services */}
+                        <div className="lg:pt-1">
+                            <h3 className="mb-5 text-xl font-bold">Services</h3>
+                            <ul className="space-y-3.5">
+                                {services.map((service) => (
+                                    <li key={service.name}>
+                                        <Link
+                                            href={service.href}
+                                            className="text-[15px] text-white/80 transition-colors hover:text-[#7cb83a]"
+                                        >
+                                            {service.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Quick Links */}
+                        <div className="lg:pt-1">
+                            <h3 className="mb-5 text-xl font-bold">Quick Links</h3>
+                            <ul className="space-y-3.5">
+                                {quickLinks.map((link) => (
+                                    <li key={link.name}>
+                                        <Link
+                                            href={link.href}
+                                            className="text-[15px] text-white/80 transition-colors hover:text-[#7cb83a]"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
