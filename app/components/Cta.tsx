@@ -125,43 +125,43 @@ export default function CtaNewsletter({ bgImage = "https://i.ibb.co/60zVZpSn/ima
             {/* Bottom 4 Contact / Info Columns Bar */}
             <div className="relative z-10 -mx-4 sm:-mx-6 lg:-mx-8 border-t border-white/10 bg-black/50 backdrop-blur-xl">
                 <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-white/15">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         
                         {/* 1. Service Hours */}
-                        <div className="flex items-center gap-4 lg:px-6 first:lg:pl-0">
-                            <div className="w-14 h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
-                                <Clock size={26} />
+                        <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#65C142]/30 transition-all">
+                            <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
+                                <Clock size={24} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold text-lg mb-1">Service Hours</h4>
-                                <p className="text-gray-300 text-xs sm:text-sm leading-snug">Mon-Fri: 7:00am-7:00pm</p>
-                                <p className="text-gray-300 text-xs sm:text-sm leading-snug">Sat: 7:00am-2:00pm</p>
-                                <p className="text-gray-300 text-xs sm:text-sm leading-snug">Sun: Closed</p>
+                                <h4 className="text-white font-bold text-base sm:text-lg mb-0.5">Service Hours</h4>
+                                <p className="text-gray-300 text-xs sm:text-sm leading-snug">Mon-Fri: 7:00am-7:00pm • Sat: 7:00am-2:00pm</p>
+                                <p className="text-gray-400 text-xs mt-0.5">Sun: Closed</p>
                             </div>
                         </div>
 
                         {/* 2. Locate Us */}
-                        <div className="flex items-center gap-4 lg:px-6">
-                            <div className="w-14 h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
-                                <MapPin size={26} />
+                        <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#65C142]/30 transition-all">
+                            <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
+                                <MapPin size={24} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold text-lg mb-1">Locate Us</h4>
-                                <p className="text-gray-300 text-xs sm:text-sm leading-snug">13785 Research Blvd Suite 125,</p>
-                                <p className="text-gray-300 text-xs sm:text-sm leading-snug">Austin, TX 78750</p>
+                                <h4 className="text-white font-bold text-base sm:text-lg mb-0.5">Locate Us</h4>
+                                <p className="text-gray-300 text-xs sm:text-sm leading-snug whitespace-normal">
+                                    13785 Research Blvd Suite 125, Austin, TX 78750
+                                </p>
                             </div>
                         </div>
 
                         {/* 3. Email Us */}
-                        <div className="flex items-center gap-4 lg:px-6">
-                            <div className="w-14 h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
-                                <MessageSquare size={26} />
+                        <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#65C142]/30 transition-all">
+                            <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
+                                <MessageSquare size={24} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold text-lg mb-1">Email Us</h4>
+                                <h4 className="text-white font-bold text-base sm:text-lg mb-0.5">Email Us</h4>
                                 <a
                                     href="mailto:Info@McCannicalRoofing.Com"
-                                    className="text-gray-300 text-xs sm:text-sm hover:text-[#65C142] transition-colors leading-snug block break-all"
+                                    className="text-gray-300 text-xs sm:text-sm hover:text-[#65C142] transition-colors leading-snug block"
                                 >
                                     Info@McCannicalRoofing.Com
                                 </a>
@@ -169,12 +169,12 @@ export default function CtaNewsletter({ bgImage = "https://i.ibb.co/60zVZpSn/ima
                         </div>
 
                         {/* 4. Call Us */}
-                        <div className="flex items-center gap-4 lg:px-6 last:lg:pr-0">
-                            <div className="w-14 h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
-                                <Phone size={26} />
+                        <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#65C142]/30 transition-all">
+                            <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border-2 border-[#65C142] text-[#65C142] flex items-center justify-center flex-shrink-0 bg-[#65C142]/10 shadow-[0_0_15px_rgba(101,193,66,0.15)]">
+                                <Phone size={24} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold text-lg mb-1">Call Us</h4>
+                                <h4 className="text-white font-bold text-base sm:text-lg mb-0.5">Call Us</h4>
                                 <a
                                     href="tel:5122383000"
                                     className="text-gray-300 text-xs sm:text-sm hover:text-[#65C142] transition-colors leading-snug block"

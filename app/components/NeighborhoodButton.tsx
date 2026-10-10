@@ -27,7 +27,7 @@ export default function NeighborhoodButton() {
                 <div className="flex flex-col items-center gap-1.5 rotate-90 sm:rotate-0 my-1">
                     <MapPin size={14} className="text-white animate-bounce" />
                 </div>
-                <span>See works near you</span>
+                <span>See work near you</span>
             </motion.button>
 
             {/* Neighborhood Projects Modal */}
