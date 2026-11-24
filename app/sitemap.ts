@@ -1,13 +1,28 @@
 import { MetadataRoute } from 'next';
-import blogPosts from './data/blog.json';
+import { getAllPosts } from '@/lib/wordpress';
+import fallbackBlogPosts from './data/blog.json';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://mccannicalroofing.com';
 
-  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/${post.slug}`,
+  let posts: Array<{ slug: string; date?: string }> = [];
+  try {
+    posts = await getAllPosts();
+  } catch {
+    posts = [];
+  }
+
+  if (!posts || posts.length === 0) {
+    posts = fallbackBlogPosts.map((p) => ({
+      slug: p.slug,
+      date: p.date,
+    }));
+  }
+
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date || Date.now()),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
 

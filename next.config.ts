@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "i.ibb.co" },     
       { protocol: "https", hostname: "i.ibb.co.com" }, 
+      { protocol: "https", hostname: "blog.mccannicalroofing.com" },
+      { protocol: "https", hostname: "docker-image-production-292a.up.railway.app" },
+      { protocol: "https", hostname: "secure.gravatar.com" },
+      { protocol: "https", hostname: "*.gravatar.com" },
     ],
   },
   async redirects() {
