@@ -38,7 +38,7 @@ const navLinks = [
     { label: "About", href: "/about", icon: Info },
     { label: "Services", href: "/services", icon: Wrench, hasDropdown: true },
     { label: "Service Area", href: "/service-area", icon: Map },
-    { label: "Blog", href: "/blog", icon: BookOpen },
+    { label: "Blog", href: "https://blog.mccannicalroofing.com/", icon: BookOpen },
     { label: "Contact", href: "/contact", icon: Mail },
 ];
 
