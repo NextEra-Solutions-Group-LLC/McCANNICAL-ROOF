@@ -175,18 +175,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         {/* Featured Image */}
-        {post.featuredImage && (
-          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl bg-gray-900">
-            <Image
-              src={post.featuredImage}
-              alt={post.featuredImageAlt || post.title}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 896px"
-              className="object-cover"
-            />
-          </div>
-        )}
+        
 
         {/* Main Blog Post Body Content (Rendered WordPress HTML) */}
         <div
